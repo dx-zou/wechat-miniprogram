@@ -1,0 +1,10 @@
+<!--index.wxml-->
+<view class="container">
+  <!-- 即时通信 -->
+  <view class="uploader">
+    <navigator url="../im/im" open-type="navigate" class="uploader-text">
+      <text>{{t('enterRoom')}}</text>
+    </navigator>
+  </view>
+  <button bind:tap="toggleLocale">{{t('lang')}}</button>
+</view>
