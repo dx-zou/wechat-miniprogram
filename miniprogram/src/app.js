@@ -9,9 +9,8 @@ promisifyAll(wx, wxp)
 /**
  * 初始化i18n
  */
-import {initI18n,getI18nInstance } from '@miniprogram-i18n/core'
+import { initI18n } from '@miniprogram-i18n/core'
 initI18n('zh-CN') 
-const i18n = getI18nInstance()
 App({
   onLaunch: function () {
     if (!wx.cloud) {
