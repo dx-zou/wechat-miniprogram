@@ -2,8 +2,9 @@
 <view class="container">
   <!-- 即时通信 -->
   <view class="uploader">
-    <navigator url="../im/im" open-type="navigate" class="uploader-text">
+    <navigator url="../im/room" open-type="navigate" class="uploader-text">
       <text>聊天室</text>
     </navigator>
+    <barrage class="barrage"></barrage>
   </view>
 </view>

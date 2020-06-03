@@ -20,7 +20,22 @@ I18nPage({
       title
     })
   },
-
+   onReady() {
+    this.addBarrage()
+  },
+  addBarrage() {
+    const barrageComp = this.selectComponent('.barrage')
+    this.barrage = barrageComp.getBarrageInstance({
+      font: 'bold 16px sans-serif',
+      duration: 10,
+      lineHeight: 2,
+      mode: 'separate',
+      padding: [10, 0, 10, 0],
+      tunnelShow: false
+    })
+    this.barrage.open()
+    // this.barrage.addData(data)
+  },
   /**
    * @description 切换语言
    *
