@@ -1,0 +1,22 @@
+<view>
+  <video
+    id="myVideo"
+    src="{{src}}"
+    title="视频"
+    autoplay="{{false}}"
+    vslide-gesture
+    enable-play-gesture
+    show-fullscreen-btn
+    danmu-btn
+    enable-danmu
+    object-fit="cover"
+    picture-in-picture-mode="{{['push', 'pop']}}"
+    danmu-list="{{danmuList}}"
+    bind:play="handlePlay"
+    class="video"
+  >
+    <barrage class="barrage"></barrage>
+  </video>
+  <van-field value="{{ value }}" placeholder="请输入弹幕" bind:change="onChange" />
+  <van-button type="primary" bind:click="handleSendDanmu">发送弹幕</van-button>
+</view>
