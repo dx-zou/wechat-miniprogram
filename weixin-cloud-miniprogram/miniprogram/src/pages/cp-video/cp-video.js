@@ -30,11 +30,11 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad(options) {},
+  onLoad(options) { },
   onReady() {
     this.videoContext = wx.createVideoContext('myVideo')
   },
-  onChange(e) {
+  handleChange(e) {
     this.data.value = e.detail
   },
   handleSendDanmu() {
@@ -44,5 +44,22 @@ Page({
       color: getRandomColor()
     })
   },
-  handlePlay() {}
+  handlePlay() { },
+  addBarrage() {
+    const barrageComp = this.selectComponent('.barrage')
+    this.barrage = barrageComp.getBarrageInstance({
+      font: 'bold 16px sans-serif',
+      duration: 10,
+      lineHeight: 2,
+      mode: 'separate',
+      padding: [10, 0, 10, 0],
+      tunnelShow: false
+    })
+    this.barrage.open()
+    const data = {
+      color: '#000000', // 默认黑色
+      content: '这是一条弹幕哦', // 弹幕内容
+    }
+    this.barrage.addData(data)
+  },
 })

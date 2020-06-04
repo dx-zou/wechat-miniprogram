@@ -17,6 +17,6 @@
   >
     <barrage class="barrage"></barrage>
   </video>
-  <van-field value="{{ value }}" placeholder="请输入弹幕" bind:change="onChange" />
+  <van-field value="{{ value }}" placeholder="请输入弹幕" bind:change="handleChange" />
   <van-button type="primary" bind:click="handleSendDanmu">发送弹幕</van-button>
 </view>
