@@ -1,13 +1,9 @@
 //index.js
-import { I18n , I18nPage, getI18nInstance } from '@miniprogram-i18n/core'
+import { I18nPage } from '@miniprogram-i18n/core'
 
 I18nPage({
   data: {
-    avatarUrl: '',
-    userInfo: {},
-    logged: false,
-    takeSession: false,
-    requestResult: ''
+    src: 'http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400'
   },
 
   onLoad() {
@@ -21,8 +17,9 @@ I18nPage({
     })
   },
    onReady() {
-    this.addBarrage()
+    // this.addBarrage()
   },
+   handlePlay() {},
   addBarrage() {
     const barrageComp = this.selectComponent('.barrage')
     this.barrage = barrageComp.getBarrageInstance({
@@ -34,7 +31,11 @@ I18nPage({
       tunnelShow: false
     })
     this.barrage.open()
-    // this.barrage.addData(data)
+    const data = {
+      color: '#000000', // 默认黑色
+      content: '这是一条弹幕哦', // 弹幕内容
+    }
+    this.barrage.addData(data)
   },
   /**
    * @description 切换语言

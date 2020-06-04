@@ -1,5 +1,6 @@
 {
   "usingComponents": {
     "barrage": "miniprogram-barrage"
-  }
+  },
+  "navigationStyle": "custom"
 }

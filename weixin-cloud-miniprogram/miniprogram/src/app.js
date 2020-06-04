@@ -12,7 +12,7 @@ promisifyAll(wx, wxp)
 import { initI18n } from '@miniprogram-i18n/core'
 initI18n('zh-CN') 
 App({
-  onLaunch: function () {
+  onLaunch () {
     if (!wx.cloud) {
       console.error('请使用 2.2.3 或以上的基础库以使用云能力')
     } else {
@@ -25,6 +25,10 @@ App({
         traceUser: true,
       })
     }
+    const res = wx.getMenuButtonBoundingClientRect()
+    const systemInfo = wx.getSystemInfoSync()
+    console.log(systemInfo)
+    console.log(res)
   },
   globalData: {}
 })
