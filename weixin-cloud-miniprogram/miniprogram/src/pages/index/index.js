@@ -16,6 +16,10 @@ I18nPage({
         url: '../cp-music/cp-music',
         name: '音频播放'
       },
+      {
+        url: '../cp-map/cp-map',
+        name: '地图'
+      }
     ]
   },
 

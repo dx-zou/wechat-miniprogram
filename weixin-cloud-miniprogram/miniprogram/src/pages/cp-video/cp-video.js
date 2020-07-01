@@ -62,4 +62,7 @@ Page({
     }
     this.barrage.addData(data)
   },
+  statechange(e) {
+    console.log('live-pusher code:', e.detail.code)
+  }
 })

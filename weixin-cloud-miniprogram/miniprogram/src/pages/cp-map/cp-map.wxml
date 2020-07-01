@@ -1,0 +1,11 @@
+<view>
+  <map
+    id="map"
+    longitude="{{longitude}}"
+    latitude="{{latitude}}"
+    markers="{{markersList}}"
+    subkey="subkey"
+  >
+
+  </map>
+</view>

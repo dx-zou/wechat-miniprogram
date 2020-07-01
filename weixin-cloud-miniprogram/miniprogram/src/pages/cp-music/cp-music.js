@@ -21,7 +21,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-    this.initPlayer()
+    // this.initPlayer()
   },
   onShow() {
   },
@@ -68,6 +68,7 @@ Page({
     audio.onSeeked(() => {})
     // 监听音频播放进度更新
     audio.onTimeUpdate(() => {
+      console.log('update........')
       if (!this.data.isDragging) {
         const percent = audio.currentTime / audio.duration * 100
         this.setData({
@@ -115,7 +116,7 @@ Page({
   },
   // 切歌
   handleCut(e) {
-    const dir = e.currentTarget.dataset.dir
+    const dir = e. currentTarget.dataset.dir
     const length = this.data.list.length - 1
     if (dir ==='pre') {
       this.data.currentIndex--
@@ -131,9 +132,9 @@ Page({
       duration: audio.duration,
       playing: true
     })
-    audio.stop()
+    audio.pause()
     audio.seek(0)
     audio.play()
-    
+
   }
 })

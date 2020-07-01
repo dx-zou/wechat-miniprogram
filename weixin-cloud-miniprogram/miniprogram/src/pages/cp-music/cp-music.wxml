@@ -3,7 +3,7 @@
     <van-image width="300" height="300" round fit="cover" src="{{imgSrc}}" />
   </view>
   <view class="play-view">
-    <van-icon name="arrow-left" size="30px" color="#6bddf5" data-dir="pre" bind:click="toNext" />
+    <van-icon name="arrow-left" size="30px" color="#6bddf5" data-dir="pre" bind:click="handleCut" />
     <van-icon
       name="{{playing ? 'pause-circle-o': 'play-circle-o'}}"
       size="50px"
