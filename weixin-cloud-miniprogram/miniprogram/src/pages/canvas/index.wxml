@@ -1,0 +1,4 @@
+<view>
+  <canvas id="myCanvas" type="2d"></canvas>
+  <van-button bind:click='previewImg'>预览</van-button>
+</view>

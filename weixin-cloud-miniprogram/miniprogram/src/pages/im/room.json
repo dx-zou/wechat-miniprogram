@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-    "chatroom": "/components/chatroom/chatroom"
+    "chatroom": "/components/chatroom/chatroom",
+    "mp-emoji": "/components/emoji/index"
   }
 }

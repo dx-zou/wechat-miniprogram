@@ -1,0 +1,3 @@
+<view>
+  <lucky-star lucks-data="{{lucksData}}" bind:onResult="onLuckResult" />
+</view>

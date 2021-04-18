@@ -19,7 +19,15 @@ I18nPage({
       {
         url: '../cp-map/cp-map',
         name: '地图'
-      }
+      },
+      {
+        url: '../canvas/index',
+        name: '绘图'
+      },
+      {
+        url: '../cp-lucky/index',
+        name: '抽奖'
+      },
     ]
   },
 
@@ -33,7 +41,12 @@ I18nPage({
       title
     })
   },
-   onReady() {},
+   onReady() {
+    wx.showShareMenu({
+      withShareTicket: true,
+      menus: ['shareAppMessage', 'shareTimeline']
+    })
+   },
   /**
    * @description 切换语言
    *

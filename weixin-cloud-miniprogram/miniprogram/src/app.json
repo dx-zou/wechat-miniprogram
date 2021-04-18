@@ -4,7 +4,9 @@
     "pages/im/room",
     "pages/cp-video/cp-video",
     "pages/cp-music/cp-music",
-    "pages/cp-map/cp-map"
+    "pages/cp-map/cp-map",
+    "pages/canvas/index",
+    "pages/cp-lucky/index"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
@@ -19,7 +21,8 @@
     "van-image": "@vant/weapp/image/index",
     "van-field": "@vant/weapp/field/index",
     "van-slider": "@vant/weapp/slider/index",
-    "van-icon": "@vant/weapp/icon/index"
+    "van-icon": "@vant/weapp/icon/index",
+    "lucky-star": "components/luckyStar/luckyStar"
   },
   "sitemapLocation": "sitemap.json"
 }

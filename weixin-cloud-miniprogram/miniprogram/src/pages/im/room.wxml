@@ -9,4 +9,5 @@
     onGetUserInfo="{{onGetUserInfo}}"
     getOpenID="{{getOpenID}}"
   ></chatroom>
+  <mp-emoji source="http://caizhidanao-yixuewangxiao.oss-cn-zhangjiakou.aliyuncs.com/yxwx/picture/202007/97fa400681ba4119af59e9594bc65a4a.png" />
 </view>

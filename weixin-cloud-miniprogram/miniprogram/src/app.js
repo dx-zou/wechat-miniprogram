@@ -2,9 +2,9 @@
 /**
  * API promise化
  */
-import { promisifyAll } from 'miniprogram-api-promise';
-const wxp = {}
-promisifyAll(wx, wxp)
+// import { promisifyAll } from 'miniprogram-api-promise';
+// const wxp = {}
+// promisifyAll(wx, wxp)
 
 /**
  * 初始化i18n
