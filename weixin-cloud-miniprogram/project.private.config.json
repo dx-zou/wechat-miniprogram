@@ -1,0 +1,35 @@
+{
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "id": -1,
+          "name": "db guide",
+          "pathName": "pages/databaseGuide/databaseGuide",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "pages/cp-music/cp-music",
+          "pathName": "pages/cp-music/cp-music",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/docList/index",
+          "pathName": "pages/docList/index",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

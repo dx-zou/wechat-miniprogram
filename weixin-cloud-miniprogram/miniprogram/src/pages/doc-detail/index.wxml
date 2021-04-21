@@ -1,0 +1,10 @@
+<view class="doc-detail">
+  <view class="detail-title">{{title}}</view>
+  <view class="detail-like">
+    <van-tag type="primary">{{label}}</van-tag>
+    <van-icon name="like" color="#b2bac2"/>
+  </view>
+  <view>
+    <towxml nodes="{{content}}" />
+  </view>
+</view>

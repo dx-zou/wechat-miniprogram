@@ -1,28 +1,30 @@
+swiper {
+	height: 230px;
+	background-color: #fff;
+	margin: 15px 0;
+}
+.van-image {
+	transition: all 0.2s;
+}
+.image-wrapper {
+	width: 100%;
+	height: 100%;
+	padding: 0 10px;
+}
 
-.nav-bar {
-  background: transparent !important;
+.image-class {
+	transform: scaleY(1.2) !important;
 }
-.nav-title {
-  color: #fff !important;
+.banner-image {
+	margin-bottom: 15px;
+	animation: doing 1s linear alternate infinite;
 }
-.index-container {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  background: #6bddf5;
-}
-.nav-wrapper {
-  width: 600rpx;
-  height: 90rpx;
-  line-height: 90rpx;
-  margin: 30rpx auto 0;
-  text-align: center;
-  background-color: #fff;
-  border-radius: 8rpx;
-  box-shadow: rgba(0, 0, 0, 0.3);
-}
-.nav-inner {
-  width: 100%;
-  height: 100%;
+
+@keyframes doing {
+	from {
+		transform: scale(1);
+	}
+	to {
+		transform: scale(1.1);
+	}
 }

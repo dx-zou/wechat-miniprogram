@@ -6,14 +6,38 @@
     "pages/cp-music/cp-music",
     "pages/cp-map/cp-map",
     "pages/canvas/index",
-    "pages/cp-lucky/index"
+    "pages/cp-lucky/index",
+    "pages/collection/index",
+    "pages/mine/index",
+    "pages/docList/index",
+    "pages/doc-detail/index"
   ],
+  "tabBar": {
+    "custom": false,
+    "color": "#000",
+    "selectedColor": "#000",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "学习",
+        "iconPath": "images/learning.png",
+        "selectedIconPath": "images/learning-select.png"
+      },
+      {
+        "pagePath": "pages/mine/index",
+        "text": "我的",
+        "iconPath": "images/mine.png",
+        "selectedIconPath": "images/mine-select.png"
+      }
+    ]
+  },
   "window": {
     "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#6bddf5",
-    "navigationBarTitleText": "月光宝盒",
-    "navigationBarTextStyle": "white"
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "前端宝盒",
+    "navigationBarTextStyle": "black"
   },
   "usingComponents": {
     "van-button": "@vant/weapp/button/index",
@@ -22,7 +46,14 @@
     "van-field": "@vant/weapp/field/index",
     "van-slider": "@vant/weapp/slider/index",
     "van-icon": "@vant/weapp/icon/index",
-    "lucky-star": "components/luckyStar/luckyStar"
+    "van-search": "@vant/weapp/search/index",
+    "van-grid": "@vant/weapp/grid/index",
+    "van-grid-item": "@vant/weapp/grid-item/index",
+    "van-notice-bar": "@vant/weapp/notice-bar/index",
+    "van-tag": "@vant/weapp/tag/index",
+    "van-loading": "@vant/weapp/loading/index",
+    "lucky-star": "components/luckyStar/luckyStar",
+    "towxml": "/towxml/towxml"
   },
   "sitemapLocation": "sitemap.json"
 }

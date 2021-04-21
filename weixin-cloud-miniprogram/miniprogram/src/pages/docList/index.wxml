@@ -1,0 +1,3 @@
+<view class="doc-list">
+  <doc-list-item wx:for="{{docList}}" wx:key="title" item="{{item}}" index="{{index+1}}" />
+</view>
