@@ -17,6 +17,12 @@ exports.main = async (event, context) => {
 		{ label: event.label },
 		{
 			_id: event.id
+		},
+		{
+			content: db.RegExp({
+				regexp: event.content || '.',
+				options: 'i'
+			})
 		}
 	])).get();
 	return {

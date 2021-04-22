@@ -53,7 +53,7 @@ Page({
 				img: '/images/icons/node.png',
 			},
 		],
-		tips: `人生苦短，我学了前端，茫茫人海，我遇见了你，感谢你来到这里`,
+		tips: `人生苦短，我学了前端，茫茫人海，我遇见了你，welcome here!`,
 		currentIndex: 0,
 		article: `# demo`,
 	},
@@ -63,6 +63,11 @@ Page({
 	 */
 	onLoad(options) {
 
+	},
+	toSearch() {
+		wx.navigateTo({
+			url: '/pages/search/index',
+		})
 	},
 	// 轮播图切换
 	onChange(e) {

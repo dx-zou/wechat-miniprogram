@@ -1,5 +1,7 @@
 <view>
-  <van-search shape="round" readonly placeholder="搜索文档" style="margin-top:10px" />
+  <view bind:tap="toSearch" >
+    <van-search shape="round" readonly placeholder="搜索文档" style="margin-top:10px" />
+  </view>
   <van-notice-bar 
     mode="closeable"
     left-icon="volume-o" 

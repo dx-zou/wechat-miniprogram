@@ -10,7 +10,8 @@
     "pages/collection/index",
     "pages/mine/index",
     "pages/doc-list/index",
-    "pages/doc-detail/index"
+    "pages/doc-detail/index",
+    "pages/search/index"
   ],
   "tabBar": {
     "custom": false,
@@ -56,7 +57,8 @@
     "van-skeleton": "@vant/weapp/skeleton/index",
     "van-toast": "@vant/weapp/toast/index",
     "lucky-star": "components/luckyStar/luckyStar",
-    "towxml": "/towxml/towxml"
+    "towxml": "/towxml/towxml",
+    "doc-list-item": "/components/docListItem/index"
   },
   "sitemapLocation": "sitemap.json"
 }

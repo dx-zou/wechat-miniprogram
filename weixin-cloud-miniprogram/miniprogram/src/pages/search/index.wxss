@@ -1,0 +1,6 @@
+.search-content {
+  height: calc(100vh - 65px);
+  padding: 10px;
+  margin-top: 30rpx;
+  box-sizing: border-box;
+}

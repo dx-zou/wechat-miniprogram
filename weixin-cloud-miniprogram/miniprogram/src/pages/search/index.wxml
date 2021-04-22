@@ -1,0 +1,13 @@
+<view class="search-view">
+  <van-search
+    value="{{ searchValue }}"
+    focus
+    placeholder="请输入搜索关键词"
+    bind:change="onChange"
+    bind:search="onSearch"
+    bind:cancel="onCancel"
+  />
+  <scroll-view class="search-content" scroll-y enable-back-to-top>
+    <doc-list-item wx:for="{{list}}" wx:key="title" item="{{item}}" index="{{index+1}}" />
+  </scroll-view>
+</view>
