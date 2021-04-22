@@ -6,13 +6,23 @@
     mode="closeable"
     left-icon="volume-o" 
     text="{{tips}}" 
-    color="#1989fa" 
+    color="var(--base-theme-color)" 
     background-color="#ecf9ff" 
     speed="30" 
   />
-  <swiper indicator-dots="{{true}}" indicator-color="#fff" indicator-active-color="#1989fa" autoplay="{{true}}"
-    circular="{{true}}" interval="{{3000}}" duration="{{500}}" previous-margin="40px" next-margin="50px"
-    display-multiple-items="{{1}}" bind:animationfinish="onChange">
+  <swiper 
+    indicator-dots="{{true}}" 
+    indicator-color="#fff" 
+    indicator-active-color="var(--base-theme-color)" 
+    autoplay="{{true}}"
+    circular="{{true}}" 
+    interval="{{3000}}" 
+    duration="{{500}}" 
+    previous-margin="40px"
+    next-margin="50px"
+    display-multiple-items="{{1}}" 
+    bind:animationfinish="onChange"
+  >
     <block wx:for="{{swiperList}}" wx:key="imgUrl">
       <swiper-item>
         <view class="image-wrapper">

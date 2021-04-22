@@ -15,11 +15,7 @@ Page({
 			{
 				imgUrl: '/images/3.png',
 				url: "/pages/doc-list/index?label=Vue"
-			},
-			{
-				imgUrl: '/images/4.png',
-				url: ""
-			},
+			}
 		],
 		list: [
 			{

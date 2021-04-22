@@ -4,15 +4,23 @@ Page({
    * 页面的初始数据
    */
   data: {
-    searchValue:"",
-    list: []
+    searchValue: "",
+    showEmpty: false,
+    list: [],
+    hotList: ['vue', 'react', 'css']
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
+  onLoad: function (options) {},
 
+  onClickHot(e) {
+    const { keyword } = e.currentTarget.dataset
+    this.setData({
+      searchValue: keyword
+    })
+    this.onSearch({detail: keyword})
   },
   onChange(e) {
     this.setData({
@@ -20,25 +28,27 @@ Page({
     })
   },
   async onSearch(e) {
-    if(!e.detail) {
+    if (!e.detail) {
       wx.showToast({
-        icon:"none",
+        icon: "none",
         title: '请输入关键字搜索',
       })
       return;
     }
-    
+
     wx.showLoading({
       title: '搜索中',
     })
-    const res= await wx.cloud.callFunction({
-      name:"getDocs",
-      data:{
+    const res = await wx.cloud.callFunction({
+      name: "getDocs",
+      data: {
         content: e.detail
       }
     })
+    const data = res.result.data
     this.setData({
-      list: res.result.data
+      list: data,
+      showEmpty: data.length === 0
     })
     wx.hideLoading()
   },

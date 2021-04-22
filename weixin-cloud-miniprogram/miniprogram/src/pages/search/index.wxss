@@ -1,6 +1,21 @@
 .search-content {
-  height: calc(100vh - 65px);
+  height: calc(100vh - 80px);
   padding: 10px;
   margin-top: 30rpx;
   box-sizing: border-box;
+}
+
+.search-hot {
+  display: flex;
+  padding: 0 12px 10px;
+  background: #fff;
+  color: #333;
+  font-size: 13px;
+}
+.hot-tag {
+  display: flex;
+  flex-wrap: wrap;
+}
+.search-hot .van-tag {
+  margin: 0 10px 5px 0;
 }

@@ -7,6 +7,15 @@
     bind:search="onSearch"
     bind:cancel="onCancel"
   />
+  <view class="search-hot">
+    <view style="width:68px">热门搜索：</view>
+    <view class="hot-tag">
+      <view  wx:for="{{hotList}}" wx:key="index" data-keyword="{{item}}" bind:tap="onClickHot">
+        <van-tag plain type="primary">{{item}}</van-tag>
+      </view>
+    </view>
+  </view>
+  <empty-place wx:if="{{showEmpty}}"/>
   <scroll-view class="search-content" scroll-y enable-back-to-top>
     <doc-list-item wx:for="{{list}}" wx:key="title" item="{{item}}" index="{{index+1}}" />
   </scroll-view>

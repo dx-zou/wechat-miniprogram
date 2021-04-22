@@ -11,8 +11,8 @@
   <view class="item-bottom">
     <van-tag type="primary" plain round>{{item.label}}</van-tag>
     <view>
-      <van-icon name="like" color="#1989fa" />1
-      <van-icon name="browsing-history" color="#1989fa" />10
+      <van-icon name="like" color="var(--base-theme-color)" />1
+      <van-icon name="browsing-history" color="var(--base-theme-color)" />10
     </view>
   </view>
 </view>

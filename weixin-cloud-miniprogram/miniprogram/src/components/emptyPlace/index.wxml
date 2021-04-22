@@ -1,0 +1,4 @@
+<view class="empty-view">
+  <van-image width="640rpx"  height="640rpx" src="/images/empty.png"></van-image>
+  <view class="empty-desc">{{description}}</view>
+</view>

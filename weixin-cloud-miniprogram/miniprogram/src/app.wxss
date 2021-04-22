@@ -3,6 +3,10 @@
 page {
   position: relative;
   background: #f6f6f6;
-  --base-theme-color: #6bddf5;
+  --base-theme-color: #2ea5ab;
+  --blue: var(--base-theme-color);
+  --tag-primary-color: var(--base-theme-color);
+  --notice-bar-background-color: var(--base-theme-color);
+  --notice-bar-text-color: var(--base-theme-color)
 }
 

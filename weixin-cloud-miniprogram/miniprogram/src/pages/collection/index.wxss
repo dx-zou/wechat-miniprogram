@@ -10,7 +10,7 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  background: #6bddf5;
+  background: var(--base-theme-color);
 }
 .nav-wrapper {
   width: 600rpx;
