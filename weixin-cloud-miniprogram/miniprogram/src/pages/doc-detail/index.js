@@ -8,7 +8,8 @@ Page({
   data: {
     title: "",
     label:"",
-    content: ""
+    content: "",
+    loading: true
   },
 
   /**
@@ -24,8 +25,11 @@ Page({
   },
 
   async toMarkdown(id, label) {
-    wx.showLoading({
-      title: '加载中',
+    // wx.showLoading({
+    //   title: '加载中',
+    // })
+    this.setData({
+      loading: true
     })
     const res = await wx.cloud.callFunction({
       name: 'getDocs',
@@ -53,7 +57,10 @@ Page({
       title: this.data.title,
       label: this.data.label
     });
-    wx.hideLoading()
+    this.setData({
+      loading: false
+    })
+    // wx.hideLoading()
   },
   /**
    * 生命周期函数--监听页面初次渲染完成
@@ -93,8 +100,8 @@ Page({
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function () {
-
+  onReachBottom: function (e) {
+    console.log(e)
   },
 
   /**

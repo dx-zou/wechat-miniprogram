@@ -1,2 +1,11 @@
-<!--miniprogram/src/pages/mine/index.wxml-->
-<text>miniprogram/src/pages/mine/index.wxml</text>
+<view>
+  <view class="userInfo" wx:if="{{hasUserLogin }}">
+    <van-image width="200rpx" height="200rpx" round src="{{avatarUrl}}"></van-image>
+    <view class="user-name">{{nickName}}</view>
+  </view>
+  <view class="none-login" wx:else>
+    <van-image width="200rpx" height="200rpx" src="/images/logo.png"></van-image>
+    <view class="login-tips">您尚未登录，请登录后解锁神秘宝盒</view>
+    <van-button type="primary" round custom-class="login-btn" bind:click="toLogin">微信授权登录</van-button>
+  </view>
+</view>

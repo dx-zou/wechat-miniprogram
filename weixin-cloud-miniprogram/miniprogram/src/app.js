@@ -11,6 +11,7 @@
  */
 import { initI18n } from '@miniprogram-i18n/core';
 initI18n('zh-CN');
+
 App({
 	towxml: require('/towxml/index'),
 	onLaunch() {
@@ -25,9 +26,31 @@ App({
 				env: 'dx-feng',
 				traceUser: true,
 			});
+			this.handleUserLogin()
 		}
-		// const res = wx.getMenuButtonBoundingClientRect();
-		// const systemInfo = wx.getSystemInfoSync();
 	},
-	globalData: {},
+
+	/**
+	 * 处理用户授权登录
+	 */
+	async handleUserLogin() {
+		// 获取用户信息
+		const res = await wx.cloud.callFunction({
+			name: "login",
+		})
+		console.log(res)
+
+		const data = res.result.data;
+		if (data.length === 0) {
+			// 数据库未能查到openid，说明没有授权登录
+			this.globalData.hasUserLogin = false
+		} else {
+			this.globalData.userInfo = data[0];
+			this.globalData.hasUserLogin = true;
+		}
+	},
+	globalData: {
+		userInfo: {},
+		hasUserLogin: false
+	},
 });

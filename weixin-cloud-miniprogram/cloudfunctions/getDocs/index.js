@@ -4,8 +4,13 @@ const cloud = require('wx-server-sdk');
 cloud.init();
 
 // 云函数入口函数
+/**
+ * 获取文档
+ * @param {*} event 
+ * @param {*} context 
+ */
 exports.main = async (event, context) => {
-	const wxContext = cloud.getWXContext();
+	const { OPENID, APPID, UNIONID } = cloud.getWXContext();
 	const db = cloud.database();
 	const _ = db.command
 	const res = await db.collection('docs').where(_.and([
@@ -16,5 +21,8 @@ exports.main = async (event, context) => {
 	])).get();
 	return {
 		data: res.data,
+		openid: OPENID,
+		appid: APPID,
+		unionid: UNIONID,
 	};
 };

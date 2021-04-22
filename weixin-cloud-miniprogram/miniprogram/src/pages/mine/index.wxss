@@ -1,1 +1,22 @@
-/* miniprogram/src/pages/mine/index.wxss */
+.none-login {
+margin-top: 100rpx;
+  text-align: center;
+}
+
+.login-tips {
+  margin: 50rpx 0;
+}
+
+.login-btn {
+  width: 80%;
+}
+
+.userInfo {
+  margin-bottom: 30rpx;
+  padding: 10rpx;
+  background: #fff;
+  text-align: center;
+}
+.user-name {
+  margin-top: 20rpx;
+}

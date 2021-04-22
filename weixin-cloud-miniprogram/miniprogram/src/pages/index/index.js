@@ -46,6 +46,7 @@ Page({
 				img: '/images/icons/node.png',
 			},
 		],
+		tips: `1.在代码阅读过程中人们说脏话的频率是衡量代码质量的唯一标准，2.技术是开发它的人的共同灵魂。`,
 		currentIndex: 0,
 		article: `# demo`,
 	},

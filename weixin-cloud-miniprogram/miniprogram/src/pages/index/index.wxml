@@ -1,5 +1,6 @@
 <view>
   <van-search shape="round" readonly placeholder="搜索文档" style="margin-top:10px" />
+  <van-notice-bar left-icon="volume-o" text="{{tips}}" />
   <swiper indicator-dots="{{true}}" indicator-color="#fff" indicator-active-color="orange" autoplay="{{true}}"
     circular="{{true}}" interval="{{3000}}" duration="{{500}}" previous-margin="40px" next-margin="50px"
     display-multiple-items="{{1}}" bind:animationfinish="onChange">
@@ -12,7 +13,6 @@
       </swiper-item>
     </block>
   </swiper>
-  <van-notice-bar left-icon="volume-o" text="1.在代码阅读过程中人们说脏话的频率是衡量代码质量的唯一标准，2.技术是开发它的人的共同灵魂。" />
   <van-image width="100%" height="100px" fit="fill" src="/images/2.jpg" custom-class="banner-image"
     bind:click="onBannerClick" />
   <van-grid column-num="3" icon-size="50" clickable square>

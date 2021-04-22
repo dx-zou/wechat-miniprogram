@@ -1,6 +1,7 @@
 /**app.wxss**/
 
 page {
+  position: relative;
   background: #f6f6f6;
   --base-theme-color: #6bddf5;
 }

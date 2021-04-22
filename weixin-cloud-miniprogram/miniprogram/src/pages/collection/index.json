@@ -2,5 +2,5 @@
 	"usingComponents": {
 		"barrage": "miniprogram-barrage"
 	},
-	"navigationStyle": "custom"
+	"navigationBarTitleText": "组件收藏室"
 }

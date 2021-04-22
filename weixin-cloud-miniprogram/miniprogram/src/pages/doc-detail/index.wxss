@@ -1,3 +1,4 @@
+
 .detail-title {
   padding: 20rpx;
   background: #fff;
@@ -10,5 +11,9 @@
   align-items: center;
   padding: 20rpx;
   margin-bottom: 30rpx;
+  background: #fff;
+}
+.detail-content {
+  padding: 10rpx;
   background: #fff;
 }

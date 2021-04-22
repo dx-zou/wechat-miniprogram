@@ -25,6 +25,7 @@ Page({
         label,
       },
     });
+    console.log(res)
     this.setData({
       docList: res.result.data
     })
