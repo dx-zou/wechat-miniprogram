@@ -3,50 +3,57 @@ Page({
 	 * 页面的初始数据
 	 */
 	data: {
-		imgUrls: [
+		swiperList: [
 			{
-				url: '/images/1.png',
+				imgUrl: '/images/1.png',
+				url: "/pages/doc-list/index?label=JavaScript",
 			},
 			{
-				url: '/images/2.png',
+				imgUrl: '/images/2.png',
+				url: "/pages/collection/index"
 			},
 			{
-				url: '/images/3.png',
+				imgUrl: '/images/3.png',
+				url: "/pages/doc-list/index?label=Vue"
+			},
+			{
+				imgUrl: '/images/4.png',
+				url: ""
 			},
 		],
 		list: [
 			{
 				text: 'JavaScript',
-				url: '',
+				label: 'JavaScript',
 				img: '/images/icons/javaScript.png',
 			},
 			{
 				text: 'CSS',
-				url: '',
+				label: 'CSS',
 				img: '/images/icons/css.png',
 			},
 			{
 				text: 'HTML',
-				url: '',
+				label: 'HTML',
 				img: '/images/icons/html.png',
 			},
 			{
 				text: 'Vue',
-				url: '',
+				label: 'Vue',
 				img: '/images/icons/vue.png',
 			},
 			{
 				text: 'React',
-				url: '',
+				label: 'React',
 				img: '/images/icons/react.png',
 			},
 			{
 				text: 'Node',
-				url: '',
+				label: 'Node',
 				img: '/images/icons/node.png',
 			},
 		],
-		tips: `1.在代码阅读过程中人们说脏话的频率是衡量代码质量的唯一标准，2.技术是开发它的人的共同灵魂。`,
+		tips: `人生苦短，我学了前端，茫茫人海，我遇见了你，感谢你来到这里`,
 		currentIndex: 0,
 		article: `# demo`,
 	},
@@ -64,6 +71,15 @@ Page({
 			currentIndex,
 		});
 	},
+	onNavigate(e) {
+		const {url} = e.target.dataset
+		if(!url) {
+			return
+		}
+		wx.navigateTo({
+			url,
+		})
+	},
 	// 点击banner图片
 	onBannerClick() {
 		wx.navigateTo({
@@ -73,41 +89,41 @@ Page({
 	// 点击宫格请求对应的文档
 	async onGridClick(e) {
 		wx.navigateTo({
-			url: `/pages/docList/index?label=${e.target.dataset.label}`,
-		});		
+			url: `/pages/doc-list/index?label=${e.target.dataset.label}`,
+		});
 	},
 	/**
 	 * 生命周期函数--监听页面初次渲染完成
 	 */
-	onReady: function () {},
+	onReady: function () { },
 
 	/**
 	 * 生命周期函数--监听页面显示
 	 */
-	onShow: function () {},
+	onShow: function () { },
 
 	/**
 	 * 生命周期函数--监听页面隐藏
 	 */
-	onHide: function () {},
+	onHide: function () { },
 
 	/**
 	 * 生命周期函数--监听页面卸载
 	 */
-	onUnload: function () {},
+	onUnload: function () { },
 
 	/**
 	 * 页面相关事件处理函数--监听用户下拉动作
 	 */
-	onPullDownRefresh: function () {},
+	onPullDownRefresh: function () { },
 
 	/**
 	 * 页面上拉触底事件的处理函数
 	 */
-	onReachBottom: function () {},
+	onReachBottom: function () { },
 
 	/**
 	 * 用户点击右上角分享
 	 */
-	onShareAppMessage: function () {},
+	onShareAppMessage: function () { },
 });

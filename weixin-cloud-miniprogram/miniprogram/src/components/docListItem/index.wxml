@@ -1,6 +1,6 @@
 <view class="list-item" bind:tap="toDetail">
   <view class="item-top">
-    <view class="item-index">NO.{{index}}</view>
+    <van-tag type="primary" mark>NO.{{index}}</van-tag>
     <view style="text-align:right">
       {{item.createTime}}
     </view>
@@ -9,7 +9,7 @@
     {{item.title}}
   </view>
   <view class="item-bottom">
-    <van-tag type="primary">{{item.label}}</van-tag>
+    <van-tag type="primary" plain round>{{item.label}}</van-tag>
     <view>
       <van-icon name="like" color="#1989fa" />1
       <van-icon name="browsing-history" color="#1989fa" />10

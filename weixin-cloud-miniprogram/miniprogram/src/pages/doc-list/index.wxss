@@ -1,0 +1,16 @@
+.doc-list {
+	padding: 10px;
+}
+
+.doc-list .van-skeleton {
+	margin-bottom: 30rpx;
+	padding: 20rpx;
+	background: #fff;
+}
+
+.doc-empty {
+	padding: 30rpx 10rpx;
+	text-align: center;
+	font-size: 26rpx;
+	color: #333;
+}

@@ -1,22 +1,31 @@
 <view>
   <van-search shape="round" readonly placeholder="搜索文档" style="margin-top:10px" />
-  <van-notice-bar left-icon="volume-o" text="{{tips}}" />
-  <swiper indicator-dots="{{true}}" indicator-color="#fff" indicator-active-color="orange" autoplay="{{true}}"
+  <van-notice-bar 
+    mode="closeable"
+    left-icon="volume-o" 
+    text="{{tips}}" 
+    color="#1989fa" 
+    background-color="#ecf9ff" 
+    speed="30" 
+  />
+  <swiper indicator-dots="{{true}}" indicator-color="#fff" indicator-active-color="#1989fa" autoplay="{{true}}"
     circular="{{true}}" interval="{{3000}}" duration="{{500}}" previous-margin="40px" next-margin="50px"
     display-multiple-items="{{1}}" bind:animationfinish="onChange">
-    <block wx:for="{{imgUrls}}" wx:key="url">
+    <block wx:for="{{swiperList}}" wx:key="imgUrl">
       <swiper-item>
         <view class="image-wrapper">
-          <van-image custom-class="{{ currentIndex===index && 'image-class'}}" width="100%" height="100%" fit="contain"
-            radius="10" src="{{item.url}}" />
+          <image class="{{ ['image-item', currentIndex===index && 'current-image']}}" mode="scaleToFill"
+            show-menu-by-longpress src="{{item.imgUrl}}" data-url="{{item.url}}" bind:tap="onNavigate" />
         </view>
       </swiper-item>
     </block>
   </swiper>
-  <van-image width="100%" height="100px" fit="fill" src="/images/2.jpg" custom-class="banner-image"
-    bind:click="onBannerClick" />
+  <view class="contact-view">
+    <van-image width="100%" height="100rpx" fit="fill" src="/images/banner.png" custom-class="contact-image" />
+    <button open-type="contact" class="contact-btn">客服</button>
+  </view>
   <van-grid column-num="3" icon-size="50" clickable square>
-    <van-grid-item wx:for="{{ list }}" wx:key="img" icon="{{item.img}}" text="{{item.text}}" data-label="{{item.text}}"
+    <van-grid-item wx:for="{{ list }}" wx:key="img" icon="{{item.img}}" text="{{item.text}}" data-label="{{item.label}}"
       bind:click="onGridClick" />
   </van-grid>
 </view>

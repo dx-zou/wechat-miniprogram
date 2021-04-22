@@ -17,6 +17,9 @@ Page({
    */
   onLoad: function (options) {
     const {id,title,label} = options;
+    wx.setNavigationBarTitle({
+      title: label,
+    })
     this.setData({
       title,
       label
@@ -25,9 +28,6 @@ Page({
   },
 
   async toMarkdown(id, label) {
-    // wx.showLoading({
-    //   title: '加载中',
-    // })
     this.setData({
       loading: true
     })
@@ -60,7 +60,6 @@ Page({
     this.setData({
       loading: false
     })
-    // wx.hideLoading()
   },
   /**
    * 生命周期函数--监听页面初次渲染完成

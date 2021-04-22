@@ -19,7 +19,6 @@ const getSaveUserInfo = () => {
   wx.getUserProfile({
     desc: "完善会员信息",
     success(res) {
-      console.log(res)
       const { encryptedData, iv, signature, userInfo, cloudID } = res
       app.globalData.userInfo = userInfo
       app.globalData.hasUserLogin = true

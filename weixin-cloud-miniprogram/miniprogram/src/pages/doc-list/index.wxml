@@ -1,0 +1,9 @@
+<view class="doc-list">
+  <block wx:for="{{6}}" wx:key="index">
+    <van-skeleton  title row="3" loading="{{loading}}" class="doc-item-skeleton"/>
+  </block>
+  <view wx:if="{{docList.length === 0}}" class="doc-empty">
+    轻轻的我走了，不带走一片云彩 ...
+  </view>
+  <doc-list-item wx:for="{{docList}}" wx:key="title" item="{{item}}" index="{{index+1}}" />
+</view>

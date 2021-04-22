@@ -38,8 +38,6 @@ App({
 		const res = await wx.cloud.callFunction({
 			name: "login",
 		})
-		console.log(res)
-
 		const data = res.result.data;
 		if (data.length === 0) {
 			// 数据库未能查到openid，说明没有授权登录

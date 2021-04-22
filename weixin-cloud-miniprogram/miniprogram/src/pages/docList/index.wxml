@@ -1,4 +1,0 @@
-<view class="doc-list">
-  <van-empty wx:if="docList.length===0" description="啥也没有..." />
-  <doc-list-item wx:for="{{docList}}" wx:key="title" item="{{item}}" index="{{index+1}}" />
-</view>

@@ -1,26 +1,43 @@
 swiper {
-	height: 230px;
+	height: 330rpx;
 	background-color: #fff;
-	margin: 15px 0;
+	margin: 30rpx 0;
 }
-.van-image {
-	transition: all 0.2s;
-}
+
 .image-wrapper {
 	width: 100%;
 	height: 100%;
-	padding: 0 10px;
+	padding: 30rpx 20rpx;
+	box-sizing: border-box;
+}
+.image-item {
+	width: 100%;
+	height: 100%;
+	border-radius: 10rpx;
+	transition: all 0.2s;
 }
 
-.image-class {
-	transform: scaleY(1.2) !important;
+.current-image {
+	transform: scale(1.05, 1.1);
 }
-.banner-image {
-	margin-bottom: 15px;
-	animation: doing 1s linear alternate infinite;
+.contact-view {
+	position: relative;
+	margin-bottom: 30rpx;
+}
+.contact-image {
+	animation: heartbeat 1s linear alternate infinite;
+}
+.contact-btn {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	opacity: 0;
+	z-index: 1;
 }
 
-@keyframes doing {
+@keyframes heartbeat {
 	from {
 		transform: scale(1);
 	}

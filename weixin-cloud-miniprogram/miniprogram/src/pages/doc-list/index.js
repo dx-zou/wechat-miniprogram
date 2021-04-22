@@ -4,7 +4,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    docList: []
+    docList: [],
+    loading: true
   },
 
   /**
@@ -16,8 +17,8 @@ Page({
   },
 
   async getListData(label) {
-    wx.showLoading({
-      title: '加载中',
+    this.setData({
+      loading: true
     })
     const res = await wx.cloud.callFunction({
       name: 'getDocs',
@@ -25,11 +26,12 @@ Page({
         label,
       },
     });
-    console.log(res)
     this.setData({
       docList: res.result.data
     })
-    wx.hideLoading()
+    this.setData({
+      loading: false
+    })
   },
 
   /**

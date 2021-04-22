@@ -9,7 +9,7 @@
     "pages/cp-lucky/index",
     "pages/collection/index",
     "pages/mine/index",
-    "pages/docList/index",
+    "pages/doc-list/index",
     "pages/doc-detail/index"
   ],
   "tabBar": {
