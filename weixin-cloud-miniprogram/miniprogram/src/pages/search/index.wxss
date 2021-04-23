@@ -19,3 +19,10 @@
 .search-hot .van-tag {
   margin: 0 10px 5px 0;
 }
+
+.doc-loading {
+	padding-bottom: 10px;
+	text-align: center;
+	font-size: 13px;
+	color: #b3b9b8;
+}

@@ -35,7 +35,8 @@ Page({
       name: 'getDocs',
       data: {
         id,
-        label
+        label,
+        current: 1
       }
     })
     const data = res.result.data
