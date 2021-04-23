@@ -1,8 +1,2 @@
-<view class="doc-list">
-  <empty-place wx:if="{{docList.length === 0}}" class="doc-empty" />
-  <doc-list-item wx:for="{{docList}}" wx:key="_id" item="{{item}}" index="{{index+1}}" />
-  <view class="doc-loading">
-    <van-loading size="15px" type="spinner" wx:if="{{loading}}">加载中...</van-loading>
-    <text wx:if="{{current===totalPage && !loading}}">-- 我是有底线的呢 --</text>
-  </view>
-</view>
+
+<doc-scroll-view  search-params="{{searchParams}}" auto-fetch/>

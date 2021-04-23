@@ -1,0 +1,11 @@
+.common-scroll-view {
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+
+.doc-loading {
+	padding-bottom: 10px;
+	text-align: center;
+	font-size: 13px;
+	color: #b3b9b8;
+}

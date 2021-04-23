@@ -58,7 +58,8 @@
     "lucky-star": "components/luckyStar/luckyStar",
     "towxml": "/towxml/towxml",
     "doc-list-item": "/components/docListItem/index",
-    "empty-place": "/components/emptyPlace/index"
+    "empty-place": "/components/emptyPlace/index",
+    "doc-scroll-view": "/components/docScrollView/index"
   },
   "sitemapLocation": "sitemap.json"
 }

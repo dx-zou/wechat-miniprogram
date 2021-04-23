@@ -13,7 +13,7 @@ exports.main = async (event, context) => {
 	const { OPENID, APPID, UNIONID } = cloud.getWXContext();
 	const db = cloud.database();
 	const _ = db.command
-	const size = 3; // 每页条数
+	const size = 10; // 每页条数
 	const { label, id, content='.', current=1 } = event
 
 	const fun = db.collection('docs').where(_.and([
@@ -35,7 +35,6 @@ exports.main = async (event, context) => {
 	const totalPage = Math.ceil(total / size)
 	const res = await fun.orderBy('createTime', 'desc').skip((current - 1) * size).limit(size).get()
 	return {
-		total,
 		totalPage,
 		data: res.data,
 		openid: OPENID,
