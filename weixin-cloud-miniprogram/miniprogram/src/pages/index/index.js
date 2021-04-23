@@ -1,3 +1,5 @@
+const app = getApp()
+
 Page({
 	/**
 	 * 页面的初始数据
@@ -47,18 +49,24 @@ Page({
 				text: 'Node',
 				label: 'Node',
 				img: '/images/icons/node.png',
-			},
+			}
 		],
 		tips: `人生苦短，我学了前端，茫茫人海，我遇见了你，welcome here!`,
 		currentIndex: 0,
-		article: `# demo`,
+		navbarPaddingTop: "",
+		indexViewPaddingTop: "",
+		animationData: {}
 	},
 
 	/**
 	 * 生命周期函数--监听页面加载
 	 */
 	onLoad(options) {
-
+		const {height, top, bottom} = app.globalData.menuButtonPosition ;
+		this.setData({
+			navbarPaddingTop: top + "px",
+			indexViewPaddingTop: top + height + 15 + "px"
+		})
 	},
 	toSearch() {
 		wx.navigateTo({
@@ -101,7 +109,9 @@ Page({
 	/**
 	 * 生命周期函数--监听页面显示
 	 */
-	onShow: function () { },
+	onShow: function () {
+	
+	},
 
 	/**
 	 * 生命周期函数--监听页面隐藏

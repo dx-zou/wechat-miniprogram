@@ -1,7 +1,21 @@
-<view>
-  <view bind:tap="toSearch" >
-    <van-search shape="round" readonly placeholder="搜索文档" style="margin-top:10px" />
+<view class="index-view" style="padding-top:{{indexViewPaddingTop}}">
+  <view class="index-navbar" style="padding-top:{{navbarPaddingTop}}">
+    <view class="index-navbar-title">前端宝盒</view>
+    <view bind:tap="toSearch" >
+      <van-search 
+        shape="round" 
+        readonly 
+        placeholder="搜索文档" 
+        background="var(--base-theme-color)" 
+        custom-class="index-search"
+        field-class="index-search-field"
+        input-class="index-input"
+      />
+    </view>
   </view>
+  <!-- <view bind:tap="toSearch" >
+    <van-search shape="round" readonly placeholder="搜索文档" style="margin-top:10px" />
+  </view> -->
   <van-notice-bar 
     mode="closeable"
     left-icon="volume-o" 
@@ -32,7 +46,7 @@
       </swiper-item>
     </block>
   </swiper>
-  <view class="contact-view">
+  <view class="contact-view"  animation="{{animationData}}">
     <van-image width="100%" height="100rpx" fit="fill" src="/images/banner.png" custom-class="contact-image" />
     <button open-type="contact" class="contact-btn">客服</button>
   </view>
