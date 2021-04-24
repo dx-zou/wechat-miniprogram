@@ -1,13 +1,48 @@
 <view class="doc-detail">
-  <view class="detail-title">{{title}}</view>
-  <view class="detail-like">
-    <van-tag type="primary">{{label}}</van-tag>
-    <van-icon name="like" color="#b2bac2" />
+  <view class="detail-top">
+    <view class="detail-title">{{title}}</view>
+    <view class="detail-like">
+      <van-tag type="primary">{{label}}</van-tag>
+      <!-- <van-icon 
+        name="like" 
+        color="{{liked ? 'var(--base-theme-color)' : '#b2bac2'}}" 
+        bind:click='onLike' 
+      /> -->
+    </view>
   </view>
   <view class="detail-content">
     <van-skeleton title row="20" loading="{{ loading }}">
       <towxml nodes="{{content}}" />
     </van-skeleton>
   </view>
-
 </view>
+<movable-area class='detail-move-area' style="width:55px; height:{{moveAreaHeight}}">
+  <movable-view 
+    direction="all" 
+    inertia 
+    out-of-bounds
+    y="{{moveAreaHeight}}"
+    class="detail-move-view"
+  >
+    <view class="bar-item">
+      <van-icon 
+        name="{{liked ? 'like' : 'like-o'}}" 
+        size="20px"
+        color="var(--base-theme-color)" 
+        bind:click='onLike' 
+        custom-class="bar-icon"
+      />
+      <view>{{1}}</view>
+    </view>
+    <view class="bar-item share-item">
+      <van-icon 
+        name="share" 
+        size="20px"
+        color="var(--base-theme-color)" 
+        custom-class="bar-icon"
+      />
+      <view>分享</view>
+      <button open-type="share" class="share-btn"></button>
+    </view>
+  </movable-view>
+</movable-area>

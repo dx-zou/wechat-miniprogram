@@ -61,8 +61,8 @@ Page({
 	/**
 	 * 生命周期函数--监听页面加载
 	 */
-	onLoad(options) {
-		const {height, top, bottom} = app.globalData.menuButtonPosition ;
+	onLoad() {
+		const {height, top} = app.globalData.menuButtonPosition ;
 		this.setData({
 			navbarPaddingTop: top + "px",
 			indexViewPaddingTop: top + height + 15 + "px"

@@ -28,9 +28,9 @@ App({
 			});
 			this.handleUserLogin()
 		}
-		const res = wx.getMenuButtonBoundingClientRect()
-		console.log(res)
-		this.globalData.menuButtonPosition = res;
+		this.globalData.menuButtonPosition = wx.getMenuButtonBoundingClientRect();
+		this.globalData.systemInfo = wx.getSystemInfoSync()
+		console.log(this.globalData.systemInfo)
 	},
 
 	/**
@@ -53,6 +53,7 @@ App({
 	globalData: {
 		userInfo: {},
 		hasUserLogin: false,
-		menuButtonPosition:{}
+		menuButtonPosition:{},
+		systemInfo: {}
 	},
 });

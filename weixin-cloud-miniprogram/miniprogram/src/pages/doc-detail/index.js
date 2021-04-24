@@ -9,7 +9,9 @@ Page({
     title: "",
     label:"",
     content: "",
-    loading: true
+    loading: true,
+    liked: false,
+    moveAreaHeight: 600
   },
 
   /**
@@ -17,16 +19,25 @@ Page({
    */
   onLoad: function (options) {
     const {id,title,label} = options;
+    const { windowHeight } = app.globalData.systemInfo
     wx.setNavigationBarTitle({
       title: label,
     })
     this.setData({
       title,
-      label
+      label,
+      moveAreaHeight: `${ windowHeight - 150}px`
     })
     this.toMarkdown(id, label)
+    this.updateDocRead(id)
+
+    wx.showShareMenu({
+      withShareTicket: true,
+      menus: ['shareAppMessage', 'shareTimeline']
+    })
   },
 
+  // 解析markdown文档
   async toMarkdown(id, label) {
     this.setData({
       loading: true
@@ -62,52 +73,51 @@ Page({
       loading: false
     })
   },
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
 
+  // 更新文章阅读量
+  async updateDocRead(id) {
+    const res = await wx.cloud.callFunction({
+      name: 'updateDocRead',
+      data: {
+        id
+      }
+    })
+    console.log(res)
   },
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
+  // 文章点赞
+  onLike() {
+    this.setData({
+      liked: !this.data.liked
+    })
+    wx.showToast({
+      icon: 'none',
+      title: this.data.liked ? '收藏成功' : '取消收藏'
+    })
   },
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
+  onShare() {
 
   },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
+  
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function () {
+  onPullDownRefresh() {
 
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function (e) {
+  onReachBottom(e) {
     console.log(e)
   },
 
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
-
+  onShareAppMessage(e) {
+    console.log(e)
   }
 })

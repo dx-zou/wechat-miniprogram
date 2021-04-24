@@ -1,19 +1,70 @@
-
-.detail-title {
+.detail-top {
+  margin-bottom: 30rpx;
   padding: 20rpx;
   background: #fff;
-  font-size: 46rpx;
+  border-radius: 0 0 20rpx 20rpx;
+  box-shadow: 0px 1px 3px rgba(0, 188, 212, 0.35);
+}
+
+.detail-title {
+  font-size: 49rpx;
   font-weight: bold;
 }
+
 .detail-like {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20rpx;
-  margin-bottom: 30rpx;
-  background: #fff;
 }
+
 .detail-content {
   padding: 10rpx;
+  border-radius: 20rpx;
   background: #fff;
+}
+
+.detail-move-area {
+  position: fixed;
+  right: 5px;
+  bottom: 100px;
+  top: 100px;
+}
+
+.detail-move-view {
+  width: 100%;
+  height: 130px;
+  text-align: center;
+  background: transparent;
+  font-size: 24rpx;
+  font-weight: 700;
+  color: var(--base-theme-color);
+}
+
+.bar-item {
+  margin-bottom: 30rpx;
+}
+.share-item {
+  position: relative;
+}
+
+.share-btn {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+  opacity: 0;
+}
+
+.bar-icon {
+  border-radius: 50%;
+  box-shadow: 0px 0px 3px 2px rgba(0, 188, 212, 0.1);
+  animation: iconbg 3s ease alternate infinite ;
+}
+
+@keyframes iconbg {
+  to {
+    box-shadow: 0px 0px 9px 3px rgba(0, 188, 212, 0.6);
+  }
 }
