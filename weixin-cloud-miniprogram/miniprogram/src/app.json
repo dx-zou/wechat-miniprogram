@@ -11,7 +11,8 @@
     "pages/mine/index",
     "pages/doc-list/index",
     "pages/doc-detail/index",
-    "pages/search/index"
+    "pages/search/index",
+    "pages/favorites/index"
   ],
   "tabBar": {
     "custom": false,
@@ -55,11 +56,16 @@
     "van-loading": "@vant/weapp/loading/index",
     "van-circle": "@vant/weapp/circle/index",
     "van-skeleton": "@vant/weapp/skeleton/index",
+    "van-progress": "@vant/weapp/progress/index",
+    "van-sticky": "@vant/weapp/sticky/index",
+    "van-cell": "@vant/weapp/cell/index",
+    "van-cell-group": "@vant/weapp/cell-group/index",
     "lucky-star": "components/luckyStar/luckyStar",
     "towxml": "/towxml/towxml",
     "doc-list-item": "/components/docListItem/index",
     "empty-place": "/components/emptyPlace/index",
-    "doc-scroll-view": "/components/docScrollView/index"
+    "doc-scroll-view": "/components/docScrollView/index",
+    "movable-sidebar": "/components/movableSidebar/index"
   },
   "sitemapLocation": "sitemap.json"
 }

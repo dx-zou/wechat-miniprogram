@@ -14,9 +14,9 @@ exports.main = async (event, context) => {
 	const db = cloud.database();
 	const _ = db.command
 	const size = 10; // 每页条数
-	const { label, id, content='.', current=1 } = event
+	const { label, id, content = '.', current = 1, favorites } = event
 
-	const fun = db.collection('docs').where(_.and([
+	const params = [
 		{ label },
 		{
 			_id: id
@@ -27,7 +27,14 @@ exports.main = async (event, context) => {
 				options: 'i'
 			})
 		}
-	]));
+	]
+	if (favorites) {
+		// 查询我的收藏文档
+		params.push({
+			_id: _.in(favorites)
+		})
+	}
+	const fun = db.collection('docs').where(_.and(params));
 
 	// 符合条件的总条数
 	const { total } = await fun.count()

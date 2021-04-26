@@ -1,4 +1,4 @@
 {
   "usingComponents": {},
-  "enablePullDownRefresh": true
+  "navigationBarTitleText": "文档详情"
 }

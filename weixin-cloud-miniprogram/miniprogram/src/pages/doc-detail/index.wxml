@@ -1,48 +1,42 @@
+<!-- <van-sticky>
+  <van-progress percentage="50" />
+</van-sticky> -->
 <view class="doc-detail">
-  <view class="detail-top">
-    <view class="detail-title">{{title}}</view>
-    <view class="detail-like">
-      <van-tag type="primary">{{label}}</van-tag>
-      <!-- <van-icon 
-        name="like" 
-        color="{{liked ? 'var(--base-theme-color)' : '#b2bac2'}}" 
-        bind:click='onLike' 
-      /> -->
+  <van-skeleton title row="20" loading="{{ loading }}">
+    <view class="detail-top">
+      <view class="detail-title">{{doc.title}}</view>
+      <view class="detail-like">
+        <van-tag type="primary">{{doc.label}}</van-tag>
+      </view>
     </view>
-  </view>
-  <view class="detail-content">
-    <van-skeleton title row="20" loading="{{ loading }}">
-      <towxml nodes="{{content}}" />
-    </van-skeleton>
-  </view>
+    <view class="detail-content">
+      <towxml nodes="{{doc.content}}" />
+      <view class="content-tips">*部分内容整理于网络资源</view>
+    </view>
+  </van-skeleton> 
 </view>
-<movable-area class='detail-move-area' style="width:55px; height:{{moveAreaHeight}}">
-  <movable-view 
-    direction="all" 
-    inertia 
-    out-of-bounds
-    y="{{moveAreaHeight}}"
-    class="detail-move-view"
-  >
-    <view class="bar-item">
+
+<movable-sidebar>
+  <block>
+    <view class="movable-bar-item">
       <van-icon 
-        name="{{liked ? 'like' : 'like-o'}}" 
+        name="{{liked ? 'star' : 'star-o'}}" 
         size="20px"
         color="var(--base-theme-color)" 
         bind:click='onLike' 
-        custom-class="bar-icon"
+        custom-class="movable-bar-icon"
       />
-      <view>{{1}}</view>
+      <view>{{doc.liked}}</view>
     </view>
-    <view class="bar-item share-item">
+    <view class="movable-bar-item">
       <van-icon 
-        name="share" 
+        name="share-o" 
         size="20px"
         color="var(--base-theme-color)" 
-        custom-class="bar-icon"
+        custom-class="movable-bar-icon"
       />
       <view>分享</view>
-      <button open-type="share" class="share-btn"></button>
+      <button open-type="share" class="open-type-btn"></button>
     </view>
-  </movable-view>
-</movable-area>
+  </block>
+</movable-sidebar>

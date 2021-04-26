@@ -37,7 +37,7 @@ Component({
       // 在组件在视图层布局完成后执行
       // 自动请求数据
       this.data.autoFetch && this.getDocListData()
-    },
+    }
   },
 
   /**
@@ -57,7 +57,7 @@ Component({
           loading: true
         })
       }
-      const { label, content } = this.data.searchParams
+      const { label, content, favorites } = this.data.searchParams
       const { current } = this.data;
 
       const res = await wx.cloud.callFunction({
@@ -65,6 +65,7 @@ Component({
         data: {
           label,
           content,
+          favorites,
           current,
         },
       });
@@ -113,8 +114,8 @@ Component({
 
     // 下拉刷新
     onScrollRefresh() {
-      const { content, label } = this.data.searchParams
-      if (!content && !label) {
+      const { content, label, favorites } = this.data.searchParams
+      if (!content && !label && !favorites) {
         this.setData({
           refreshing: false
         })

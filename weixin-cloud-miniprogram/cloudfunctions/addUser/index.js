@@ -17,7 +17,8 @@ exports.main = async (event, context) => {
     iv,
     signature,
     cloudID,
-    userInfo
+    userInfo,
+    favorites
   } = event;
   const res = await db.collection("users").add({
     data: {
@@ -26,6 +27,7 @@ exports.main = async (event, context) => {
       encryptedData,
       signature,
       cloudID,
+      favorites,
       ...userInfo
     }
   })

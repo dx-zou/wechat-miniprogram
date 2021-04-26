@@ -30,7 +30,6 @@ App({
 		}
 		this.globalData.menuButtonPosition = wx.getMenuButtonBoundingClientRect();
 		this.globalData.systemInfo = wx.getSystemInfoSync()
-		console.log(this.globalData.systemInfo)
 	},
 
 	/**
