@@ -32,7 +32,7 @@ Component({
       if (!app.globalData.hasUserLogin) {
         wx.showModal({
           title: "登录提示",
-          content: "您尚未登录，请点击授权登录解锁宝盒全部功能，探索前端无尽奥义！",
+          content: "您尚未登录，请点击授权登录解锁宝盒全部功能",
           confirmText: "授权登录",
           confirmColor: "#07c160",
           success(res) {
@@ -43,9 +43,9 @@ Component({
         })
         return
       }
-      const { _id, title, label } = this.data.item;
+      const { _id} = this.data.item;
       wx.navigateTo({
-        url: `/pages/doc-detail/index?id=${_id}&title=${title}&label=${label}`,
+        url: `/pages/doc-detail/index?id=${_id}`,
       })
     }
   }

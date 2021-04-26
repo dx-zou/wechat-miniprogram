@@ -1,5 +1,5 @@
 .none-login {
-margin-top: 100rpx;
+  margin-top: 100rpx;
   text-align: center;
 }
 
@@ -17,6 +17,13 @@ margin-top: 100rpx;
   background: #fff;
   text-align: center;
 }
+
 .user-name {
   margin-top: 20rpx;
+}
+
+.cell-title {
+  position: relative;
+  display: flex;
+  align-items: center;
 }

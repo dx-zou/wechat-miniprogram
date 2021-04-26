@@ -67,15 +67,6 @@ swiper {
 .contact-image {
 	animation: heartbeat 2s linear alternate infinite;
 }
-.contact-btn {
-	position: absolute;
-	left: 0;
-	right: 0;
-	top: 0;
-	bottom: 0;
-	opacity: 0;
-	z-index: 1;
-}
 
 @keyframes heartbeat {
 	from {

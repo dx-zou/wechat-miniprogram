@@ -51,7 +51,7 @@ Page({
 				img: '/images/icons/node.png',
 			}
 		],
-		tips: `人生苦短，我学了前端，茫茫人海，我遇见了你，welcome here!`,
+		tips: `人生苦短，我们学了前端，祝您前程似锦，玩耍愉快。`,
 		currentIndex: 0,
 		navbarPaddingTop: "",
 		indexViewPaddingTop: "",
