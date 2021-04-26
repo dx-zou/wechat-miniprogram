@@ -47,7 +47,8 @@ Page({
             iv,
             signature,
             cloudID,
-            userInfo
+            userInfo,
+            favorites: []
           }
         })
       },
@@ -59,6 +60,13 @@ Page({
       }
     })
   },
+
+  toFavorites() {
+    wx.navigateTo({
+      url: '/pages/favorites/index',
+    })
+  },
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
