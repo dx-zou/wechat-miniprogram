@@ -7,14 +7,7 @@ Page({
     searchValue: "",
     hotList: ['vue', 'react', 'css'],
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad(options) {
-
-  },
-
+  
   // 搜索框输入
   onChange(e) {
     const value = e.detail.trim()
@@ -46,12 +39,5 @@ Page({
       current: 1
     })
     child.getDocListData()
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
   }
 })

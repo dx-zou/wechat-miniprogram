@@ -51,7 +51,7 @@ Page({
 				img: '/images/icons/node.png',
 			}
 		],
-		notices: `欢迎来到前端宝盒，专注前端程序员学习成长进阶交流，让我们成为更好的自己`,
+		notices: `欢迎来到前端宝盒，专注前端程序员学习成长进阶交流`,
 		currentIndex: 0,
 		navbarPaddingTop: "",
 		indexViewPaddingTop: "",
@@ -99,41 +99,5 @@ Page({
 		wx.navigateTo({
 			url: `/pages/doc-list/index?label=${e.target.dataset.label}`,
 		});
-	},
-	/**
-	 * 生命周期函数--监听页面初次渲染完成
-	 */
-	onReady: function () { },
-
-	/**
-	 * 生命周期函数--监听页面显示
-	 */
-	onShow: function () {
-	
-	},
-
-	/**
-	 * 生命周期函数--监听页面隐藏
-	 */
-	onHide: function () { },
-
-	/**
-	 * 生命周期函数--监听页面卸载
-	 */
-	onUnload: function () { },
-
-	/**
-	 * 页面相关事件处理函数--监听用户下拉动作
-	 */
-	onPullDownRefresh: function () { },
-
-	/**
-	 * 页面上拉触底事件的处理函数
-	 */
-	onReachBottom: function () { },
-
-	/**
-	 * 用户点击右上角分享
-	 */
-	onShareAppMessage: function () { },
+	}
 });

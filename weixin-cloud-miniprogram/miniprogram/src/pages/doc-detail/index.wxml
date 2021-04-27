@@ -26,7 +26,7 @@
         custom-class="movable-bar-icon"
         bind:click='onLike' 
       ></van-image>
-      <view>{{doc.liked}}</view>
+      <view>{{doc.likedUsers.length}}</view>
     </view>
     <view class="movable-bar-item">
       <van-image 

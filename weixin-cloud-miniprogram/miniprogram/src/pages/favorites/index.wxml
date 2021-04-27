@@ -1,1 +1,1 @@
-<doc-scroll-view  search-params="{{searchParams}}" class="doc-scroll-view" />
+<doc-scroll-view  search-params="{{searchParams}}" auto-fetch />

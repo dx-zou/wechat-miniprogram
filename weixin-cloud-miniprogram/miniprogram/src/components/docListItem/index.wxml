@@ -12,7 +12,7 @@
     <van-tag type="primary" plain round>{{item.label}}</van-tag>
     <view class="item-num">
       <van-icon name="star-o" color="var(--base-theme-color)" />
-      <text style="margin-left: 5px">{{item.liked}}</text>
+      <text style="margin-left: 5px">{{item.likedUsers.length}}</text>
       <van-icon name="eye-o" color="var(--base-theme-color)" custom-style="margin-left: 10px" />
       <text style="margin-left: 5px">{{item.read}}</text>
     </view>

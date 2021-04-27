@@ -19,15 +19,13 @@ Page({
       withShareTicket: true,
       menus: ['shareAppMessage', 'shareTimeline']
     })
-
     const { id } = options;
     this.getDocData(id)
-    this.getUserFavorites(id)
     this.updateDocRead(id)
   },
 
-   // 解析markdown文档
-   async getDocData(id) {
+  // 解析markdown文档
+  async getDocData(id) {
     this.setData({
       loading: true
     })
@@ -48,30 +46,15 @@ Page({
       },
     });
     data.content = c;
+    // 判断当前用户是否收藏了文档
+    const openid = app.globalData.userInfo._openid
+    const liked = (data.likedUsers || []).findIndex(item => item.openid === openid) === -1 ? false : true
     // 更新解析数据
     this.setData({
-      doc: data
-    });
-    this.setData({
+      liked,
+      doc: data,
       loading: false
-    })
-  },
-
-  // 获取用户收藏的文档
-  async getUserFavorites(id) {
-    const res = await wx.cloud.callFunction({
-      name: 'getUserInfo',
-      data: {
-        userId: app.globalData.userInfo._id,
-        field: 'favorites'
-      }
-    })
-    // 判断当前用户是否收藏了文档
-    const { favorites } = res.result.data
-    const index = favorites.findIndex(item => item === id)
-    this.setData({
-      liked: index === -1 ? false : true
-    })
+    });
   },
 
   // 更新文章阅读量
@@ -89,21 +72,22 @@ Page({
     this.setData({
       liked: !this.data.liked
     })
-    await wx.cloud.callFunction({
-      name: 'updateUserFavorites',
-      data: {
-        docId: this.data.doc._id,
-        userId: app.globalData.userInfo._id
-      }
-    })
-    const { liked } = this.data.doc
-    this.data.doc.liked = this.data.liked ? liked + 1 : liked - 1
+    const openid = app.globalData.userInfo._openid
+    this.data.doc.liked = this.data.liked
+      ? this.data.doc.likedUsers.push(openid)
+      : this.data.doc.likedUsers.pop()
     this.setData({
       doc: this.data.doc
     })
     wx.showToast({
       icon: 'none',
       title: this.data.liked ? '收藏成功' : '取消收藏'
+    })
+    await wx.cloud.callFunction({
+      name: 'updateUserFavorites',
+      data: {
+        docId: this.data.doc._id,
+      }
     })
   },
 

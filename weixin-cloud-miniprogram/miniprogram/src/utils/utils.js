@@ -30,8 +30,7 @@ const getSaveUserInfo = () => {
           iv,
           signature,
           cloudID,
-          userInfo,
-          favorites: []
+          userInfo
         }
       })
       wx.showToast({

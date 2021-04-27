@@ -17,7 +17,7 @@ Component({
     // 是否在生命周期中自动请求数据
     autoFetch: {
       type: Boolean,
-      vlaue: false
+      value: false
     }
   },
 
@@ -57,7 +57,7 @@ Component({
           loading: true
         })
       }
-      const { label, content, favorites } = this.data.searchParams
+      const { label, content, likedUsers } = this.data.searchParams
       const { current } = this.data;
 
       const res = await wx.cloud.callFunction({
@@ -65,7 +65,7 @@ Component({
         data: {
           label,
           content,
-          favorites,
+          likedUsers,
           current,
         },
       });
@@ -114,8 +114,8 @@ Component({
 
     // 下拉刷新
     onScrollRefresh() {
-      const { content, label, favorites } = this.data.searchParams
-      if (!content && !label && !favorites) {
+      const { content, label, likedUsers } = this.data.searchParams
+      if (!content && !label && !likedUsers) {
         this.setData({
           refreshing: false
         })
