@@ -1,13 +1,13 @@
-<scroll-view 
-  class="common-scroll-view" 
+<scroll-view
+  class="common-scroll-view"
   style="height:{{height}}"
-  scroll-y 
-  enable-back-to-top 
-  show-scrollbar="{{false}}" 
+  scroll-y
+  enable-back-to-top
+  show-scrollbar="{{false}}"
   refresher-enabled
   refresher-triggered="{{refreshing}}"
   refresher-background="#fff"
-  bind:scrolltolower="onScrolltolower" 
+  bind:scrolltolower="onScrolltolower"
   bind:refresherrefresh="onScrollRefresh"
 >
   <empty-place wx:if="{{docList.length === 0}}" />

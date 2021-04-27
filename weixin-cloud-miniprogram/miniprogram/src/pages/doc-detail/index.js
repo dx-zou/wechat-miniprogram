@@ -86,15 +86,15 @@ Page({
 
   // 文章点赞
   async onLike() {
-    const res = await wx.cloud.callFunction({
+    this.setData({
+      liked: !this.data.liked
+    })
+    await wx.cloud.callFunction({
       name: 'updateUserFavorites',
       data: {
         docId: this.data.doc._id,
         userId: app.globalData.userInfo._id
       }
-    })
-    this.setData({
-      liked: !this.data.liked
     })
     const { liked } = this.data.doc
     this.data.doc.liked = this.data.liked ? liked + 1 : liked - 1
@@ -104,6 +104,13 @@ Page({
     wx.showToast({
       icon: 'none',
       title: this.data.liked ? '收藏成功' : '取消收藏'
+    })
+  },
+
+  toTop() {
+    wx.pageScrollTo({
+      duration: 300,
+      scrollTop: 0
     })
   },
 

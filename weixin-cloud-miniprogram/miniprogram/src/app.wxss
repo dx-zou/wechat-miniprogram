@@ -33,18 +33,20 @@ page {
 */
 .movable-bar-item {
   position: relative;
-  margin-bottom: 30rpx;
+  margin-bottom: 22rpx;
 }
 
 .movable-bar-icon {
   margin-bottom: 5px;
   border-radius: 50%;
-  box-shadow: 0px 0px 3px 2px rgba(0, 188, 212, 0.1);
-  animation: movable-icon-a 3s ease alternate infinite ;
+  /* box-shadow: 0px 0px 3px 2px rgba(0, 188, 212, 0.1); */
+  /* animation: movable-icon-a 3s ease alternate infinite ; */
 }
 
 @keyframes movable-icon-a {
   to {
-    box-shadow: 0px 0px 9px 3px rgba(0, 188, 212, 0.6);
+    /* box-shadow: 0px 0px 9px 3px rgba(0, 188, 212, 0.6); */
+    box-shadow: 0px 0px 9px 3px #ff9811;
+
   }
 }

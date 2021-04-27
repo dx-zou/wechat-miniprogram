@@ -51,11 +51,10 @@ Page({
 				img: '/images/icons/node.png',
 			}
 		],
-		tips: `人生苦短，我们学了前端，祝您前程似锦，玩耍愉快。`,
+		notices: `欢迎来到前端宝盒，专注前端程序员学习成长进阶交流，让我们成为更好的自己`,
 		currentIndex: 0,
 		navbarPaddingTop: "",
 		indexViewPaddingTop: "",
-		animationData: {}
 	},
 
 	/**

@@ -11,7 +11,7 @@ Component({
     attached() {
       const { windowHeight } = app.globalData.systemInfo
       this.setData({
-        moveAreaHeight: `${windowHeight - 150}px`
+        moveAreaHeight: `${windowHeight - 200}px`
       })
     }
   },

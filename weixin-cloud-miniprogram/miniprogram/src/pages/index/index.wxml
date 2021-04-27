@@ -13,13 +13,10 @@
       />
     </view>
   </view>
-  <!-- <view bind:tap="toSearch" >
-    <van-search shape="round" readonly placeholder="搜索文档" style="margin-top:10px" />
-  </view> -->
   <van-notice-bar 
     mode="closeable"
     left-icon="volume-o" 
-    text="{{tips}}" 
+    text="{{notices}}" 
     color="var(--base-theme-color)" 
     background-color="#ecf9ff" 
     speed="30" 
@@ -46,7 +43,7 @@
       </swiper-item>
     </block>
   </swiper>
-  <view class="contact-view"  animation="{{animationData}}">
+  <view class="contact-view">
     <van-image width="100%" height="100rpx" fit="fill" src="/images/banner.png" custom-class="contact-image" />
     <button open-type="contact" class="open-type-btn">客服</button>
   </view>

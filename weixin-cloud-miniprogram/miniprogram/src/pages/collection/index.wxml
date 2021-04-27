@@ -1,16 +1,5 @@
-<!--index.wxml-->
-<!-- <van-nav-bar 
-  fixed 
-  title="收藏室" 
-  border="{{false}}" 
-  left-arrow 
-  left-text="返回"
-  title-class="nav-title" 
-  custom-class="nav-bar" 
-  bind:click-left="onClickLeft"
-/> -->
+
 <view class="index-container">
-  <!-- <van-image width="100%" height="200" src="/images/2.jpg" /> -->
   <view class="nav-wrapper" wx:for="{{list}}" wx:key="name">
     <navigator url="{{item.url}}" open-type="navigate" class="nav-inner">
       <text>{{item.name}}</text>

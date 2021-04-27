@@ -19,24 +19,33 @@
 <movable-sidebar>
   <block>
     <view class="movable-bar-item">
-      <van-icon 
-        name="{{liked ? 'star' : 'star-o'}}" 
-        size="20px"
-        color="var(--base-theme-color)" 
-        bind:click='onLike' 
+      <van-image 
+        width="22" 
+        height="22" 
+        src="{{liked ? '/images/icons/like.png' : '/images/icons/like-o.png'}}"
         custom-class="movable-bar-icon"
-      />
+        bind:click='onLike' 
+      ></van-image>
       <view>{{doc.liked}}</view>
     </view>
     <view class="movable-bar-item">
-      <van-icon 
-        name="share-o" 
-        size="20px"
-        color="var(--base-theme-color)" 
+      <van-image 
+        width="22" 
+        height="22" 
+        src="/images/icons/share.png"
         custom-class="movable-bar-icon"
-      />
+      ></van-image>
       <view>分享</view>
       <button open-type="share" class="open-type-btn"></button>
+    </view>
+    <view class="movable-bar-item">
+      <van-image 
+        width="22" 
+        height="22" 
+        src="/images/icons/to-top.png"
+        custom-class="movable-bar-icon"
+        bind:click='toTop' 
+      ></van-image>
     </view>
   </block>
 </movable-sidebar>

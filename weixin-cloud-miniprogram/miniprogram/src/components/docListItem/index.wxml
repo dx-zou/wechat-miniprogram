@@ -11,10 +11,10 @@
   <view class="item-bottom">
     <van-tag type="primary" plain round>{{item.label}}</van-tag>
     <view class="item-num">
-      <van-icon name="like" color="var(--base-theme-color)" />
-      <text>{{item.liked}}</text>
-      <van-icon name="browsing-history" color="var(--base-theme-color)" />
-      <text>{{item.read}}</text>
+      <van-icon name="star-o" color="var(--base-theme-color)" />
+      <text style="margin-left: 5px">{{item.liked}}</text>
+      <van-icon name="eye-o" color="var(--base-theme-color)" custom-style="margin-left: 10px" />
+      <text style="margin-left: 5px">{{item.read}}</text>
     </view>
   </view>
 </view>
