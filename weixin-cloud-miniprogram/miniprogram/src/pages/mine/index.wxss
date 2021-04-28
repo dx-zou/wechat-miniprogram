@@ -1,25 +1,50 @@
+.top-view {
+  position: relative;
+  height: 460rpx;
+  margin-bottom: 100rpx;
+  padding-top: 200rpx;
+  border-radius:  0 0  230rpx 0;
+  box-sizing: border-box;
+  background: var(--base-theme-color);
+  color: #fff;
+}
+
+.user-name {
+  padding: 0 20px;
+  text-align: center;
+  font-size: 55rpx;
+  word-break: break-word;
+}
+
+.avatar-img {
+  position: absolute;
+  left: 100rpx;
+  bottom: -110rpx;
+}
+
 .none-login {
-  margin-top: 100rpx;
+  margin-top: 200rpx;
   text-align: center;
 }
 
 .login-tips {
-  margin: 50rpx 0;
+  margin-bottom: 50rpx;
 }
 
 .login-btn {
   width: 80%;
 }
 
-.userInfo {
-  margin-bottom: 30rpx;
-  padding: 10rpx;
+.cell-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto 30rpx;
+  padding: 30rpx 15rpx 30rpx 30rpx;
+  border-radius: 16rpx;
   background: #fff;
-  text-align: center;
-}
-
-.user-name {
-  margin-top: 20rpx;
+  box-shadow: 0 8px 12px #ebedf0;
 }
 
 .cell-title {

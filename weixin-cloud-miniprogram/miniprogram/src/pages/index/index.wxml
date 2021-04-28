@@ -44,11 +44,17 @@
     </block>
   </swiper>
   <!-- <view class="contact-view">
-    <van-image width="100%" height="100rpx" fit="fill" src="/images/banner.png" custom-class="contact-image" />
-    <button open-type="contact" class="open-type-btn">客服</button>
+    <van-image width="100%" height="100rpx" fit="fill" src="/images/banner.png" custom-class="contact-image" bind:tap='toCheckIn' />
   </view> -->
-  <van-grid column-num="3" icon-size="50" clickable square>
-    <van-grid-item wx:for="{{ list }}" wx:key="img" icon="{{item.img}}" text="{{item.text}}" data-label="{{item.label}}"
-      bind:click="onGridClick" />
+  <van-grid column-num="3" icon-size="26" clickable square>
+    <van-grid-item 
+      wx:for="{{ list }}" 
+      wx:key="img" 
+      icon="{{item.img}}" 
+      text="{{item.text}}"  
+      data-label="{{item.label}}"
+      data-url="{{item.url}}"
+      bind:click="onGridClick" 
+    />
   </van-grid>
 </view>

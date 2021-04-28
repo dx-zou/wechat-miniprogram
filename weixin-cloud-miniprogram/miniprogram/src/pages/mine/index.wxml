@@ -1,37 +1,36 @@
-<!-- <van-image width="100%" height="300" src="/images/1.png"></van-image> -->
-<view wx:if="{{hasUserLogin }}">
-  <view class="userInfo">
-    <van-image width="160rpx" height="160rpx" round src="{{avatarUrl}}"></van-image>
-    <view class="user-name">{{nickName}}</view>
-  </view>
-  <van-cell-group>
-    <van-cell size="large" clickable>
-      <view slot="title" class="cell-title" bind:tap='toFavorites'>
-        <van-image width="30" height="30" src="/images/icons/mine.png" style="margin-right: 10px"></van-image>
-        <text>收藏文档</text>
-      </view>
-      <van-icon name="arrow" size="23" color="var(--base-theme-color)" slot="right-icon" />
-    </van-cell>
-    <van-cell size="large" clickable>
-      <view slot="title" class="cell-title">
-        <van-image width="30" height="30" src="/images/icons/contact.png" style="margin-right: 10px"></van-image>
-        <text>联系客服</text>
-        <button open-type="contact" show-message-card class="open-type-btn"></button>
-      </view>
-      <van-icon name="arrow" size="23" color="var(--base-theme-color)" slot="right-icon" />
-    </van-cell>
-    <van-cell size="large" clickable>
-      <view slot="title" class="cell-title">
-        <van-image width="30" height="30" src="/images/icons/feedback.png" style="margin-right: 10px"></van-image>
-        <text>系统反馈</text>
-        <button open-type="feedback" class="open-type-btn"></button>
-      </view>
-      <van-icon name="arrow" size="23" color="var(--base-theme-color)" slot="right-icon" />
-    </van-cell>
-  </van-cell-group>
+<view class="top-view">
+  <view class="user-name">Welcome，{{hasUserLogin ? nickName : '游客'}}</view>
+  <van-image width="130rpx" height="130rpx" round src="{{hasUserLogin ? avatarUrl : '/images/logo.png'}}" custom-class="avatar-img"></van-image>
 </view>
+<block wx:if="{{hasUserLogin }}">
+  <view class="cell-item" bind:tap='toFavorites'>
+    <view class="cell-title">
+      <van-image width="30" height="30" src="/images/icons/mine.png" style="margin-right: 10px"></van-image>
+      <text>收藏文档</text>
+    </view>
+    <van-icon name="arrow" size="23" color="var(--base-theme-color)" slot="right-icon" />
+  </view>
+  <view class="cell-item">
+    <view class="cell-title">
+      <van-image width="30" height="30" src="/images/icons/contact.png" style="margin-right: 10px"></van-image>
+      <text>联系客服</text>
+      <button open-type="contact" show-message-card class="open-type-btn"></button>
+    </view>
+    <van-icon name="arrow" size="23" color="var(--base-theme-color)" slot="right-icon" />
+  </view>
+  <view class="cell-item">
+    <view class="cell-title">
+      <van-image width="30" height="30" src="/images/icons/feedback.png" style="margin-right: 10px"></van-image>
+      <text>系统反馈</text>
+      <button open-type="feedback" class="open-type-btn"></button>
+    </view>
+    <van-icon name="arrow" size="23" color="var(--base-theme-color)" slot="right-icon" />
+  </view>
+</block>
 <view class="none-login" wx:else>
-  <van-image width="200rpx" height="200rpx" src="/images/logo.png"></van-image>
-  <view class="login-tips">您尚未登录，请登录后解锁神秘宝盒</view>
+  <view class="login-tips">
+    <view style="margin-bottom:10px">您尚未登录</view>
+    请点击授权登录，解锁更多功能
+  </view>
   <van-button type="primary" round custom-class="login-btn" bind:click="toLogin">微信授权登录</van-button>
 </view>

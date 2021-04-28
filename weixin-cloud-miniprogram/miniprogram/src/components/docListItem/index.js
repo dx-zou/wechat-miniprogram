@@ -31,8 +31,8 @@ Component({
       // 没有授权登录的情况
       if (!app.globalData.hasUserLogin) {
         wx.showModal({
-          title: "登录提示",
-          content: "您尚未登录，请点击授权登录解锁宝盒全部功能",
+          title: "您尚未登录!",
+          content: "请点击授权登录，解锁更多功能",
           confirmText: "授权登录",
           confirmColor: "#07c160",
           success(res) {

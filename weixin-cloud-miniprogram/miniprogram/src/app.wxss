@@ -5,6 +5,7 @@
 */
 page {
   position: relative;
+  overflow-x: hidden;
   background: #f6f6f6;
   --base-theme-color: #2ea5ab;
   --base-font-color: #333;
