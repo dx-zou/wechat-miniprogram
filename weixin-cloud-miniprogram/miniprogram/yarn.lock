@@ -576,6 +576,11 @@ es6-weak-map@^2.0.1:
     es6-iterator "^2.0.3"
     es6-symbol "^3.1.1"
 
+eventemitter3@^4.0.0:
+  version "4.0.7"
+  resolved "https://registry.npm.taobao.org/eventemitter3/download/eventemitter3-4.0.7.tgz?cache=0&sync_timestamp=1598517790184&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Feventemitter3%2Fdownload%2Feventemitter3-4.0.7.tgz#2de9b68f6528d5644ef5c59526a1b4a07306169f"
+  integrity sha1-Lem2j2Uo1WRO9cWVJqG0oHMGFp8=
+
 expand-brackets@^2.1.4:
   version "2.1.4"
   resolved "https://registry.npm.taobao.org/expand-brackets/download/expand-brackets-2.1.4.tgz#b77735e315ce30f6b6eff0f83b04151a22449622"
@@ -2259,6 +2264,13 @@ which@^1.2.14:
   dependencies:
     isexe "^2.0.0"
 
+widget-ui@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.npm.taobao.org/widget-ui/download/widget-ui-1.0.2.tgz#d65a560b91739fbd0ea7c2f5f2d28fe4c0132470"
+  integrity sha1-1lpWC5Fzn70Op8L18tKP5MATJHA=
+  dependencies:
+    eventemitter3 "^4.0.0"
+
 wrap-ansi@^2.0.0:
   version "2.1.0"
   resolved "https://registry.npm.taobao.org/wrap-ansi/download/wrap-ansi-2.1.0.tgz?cache=0&sync_timestamp=1618558913931&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fwrap-ansi%2Fdownload%2Fwrap-ansi-2.1.0.tgz#d8fc3d284dd05794fe84973caecdd1cf824fdd85"
@@ -2271,6 +2283,13 @@ wrappy@1:
   version "1.0.2"
   resolved "https://registry.npm.taobao.org/wrappy/download/wrappy-1.0.2.tgz#b5243d8f3ec1aa35f1364605bc0d1036e30ab69f"
   integrity sha1-tSQ9jz7BqjXxNkYFvA0QNuMKtp8=
+
+wxml-to-canvas@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.npm.taobao.org/wxml-to-canvas/download/wxml-to-canvas-1.1.1.tgz#64771473fb1e251bdad94f8c6ffa7dd64290e7ca"
+  integrity sha1-ZHcUc/seJRva2U+Mb/p91kKQ58o=
+  dependencies:
+    widget-ui "^1.0.2"
 
 xtend@~4.0.0, xtend@~4.0.1:
   version "4.0.2"

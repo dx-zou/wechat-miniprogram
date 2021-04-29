@@ -1,7 +1,7 @@
 .top-view {
   position: relative;
   height: 460rpx;
-  margin-bottom: 100rpx;
+  margin-bottom: 115rpx;
   padding-top: 200rpx;
   border-radius:  0 0  230rpx 0;
   box-sizing: border-box;
@@ -19,7 +19,10 @@
 .avatar-img {
   position: absolute;
   left: 100rpx;
-  bottom: -110rpx;
+  bottom: -100rpx;
+  padding: 3px;
+  background: var(--base-bg-color);
+  box-shadow: 0 0 9px 1px #ebedf0;
 }
 
 .none-login {

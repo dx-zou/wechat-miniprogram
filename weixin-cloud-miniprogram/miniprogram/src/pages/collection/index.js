@@ -28,6 +28,10 @@ I18nPage({
 				url: '../cp-lucky/index',
 				name: '抽奖',
 			},
+			{
+				url: '../cp-poster/index',
+				name: '海报分享'
+			}
 		],
 	},
 

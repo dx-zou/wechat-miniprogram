@@ -44,7 +44,7 @@
   },
   "appid": "wx955ae001a669723f",
   "projectname": "my-wechat-learning",
-  "libVersion": "2.16.0",
+  "libVersion": "2.16.1",
   "simulatorType": "wechat",
   "simulatorPluginLibVersion": {},
   "cloudfunctionTemplateRoot": "cloudfunctionTemplate",

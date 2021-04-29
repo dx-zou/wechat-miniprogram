@@ -4,16 +4,18 @@
   页面公共样式
 */
 page {
-  position: relative;
-  overflow-x: hidden;
-  background: #f6f6f6;
+  --base-bg-color: #f6f6f6;
   --base-theme-color: #2ea5ab;
   --base-font-color: #333;
   --base-text-color: #969696;
   --blue: var(--base-theme-color);
   --tag-primary-color: var(--base-theme-color);
   --notice-bar-background-color: var(--base-theme-color);
-  --notice-bar-text-color: var(--base-theme-color)
+  --notice-bar-text-color: var(--base-theme-color);
+  position: relative;
+  overflow-x: hidden;
+  background: var(--base-bg-color);
+ 
 }
 
 /**

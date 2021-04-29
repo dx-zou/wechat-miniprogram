@@ -12,7 +12,8 @@
     "pages/doc-list/index",
     "pages/doc-detail/index",
     "pages/search/index",
-    "pages/favorites/index"
+    "pages/favorites/index",
+    "pages/cp-poster/index"
   ],
   "tabBar": {
     "custom": false,
@@ -60,6 +61,7 @@
     "van-sticky": "@vant/weapp/sticky/index",
     "van-cell": "@vant/weapp/cell/index",
     "van-cell-group": "@vant/weapp/cell-group/index",
+    "van-dialog": "@vant/weapp/dialog/index",
     "lucky-star": "components/luckyStar/luckyStar",
     "towxml": "/towxml/towxml",
     "doc-list-item": "/components/docListItem/index",

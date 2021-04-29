@@ -39,15 +39,21 @@ async function sendSubscribeMessage(event) {
 		touser: OPENID,
 		templateId,
 		miniprogram_state: 'developer',
-		page: 'pages/openapi/openapi',
+		page: 'pages/index/index',
 		// 此处字段应修改为所申请模板所要求的字段
 		data: {
-			thing1: {
-				value: '咖啡',
+			thing9: {
+				value: '养成每天打卡学习好习惯',
 			},
-			time3: {
-				value: '2020-01-01 00:00',
+			time13: {
+				value: '2021-05-01 00:00',
 			},
+			number7: {
+				value: 1000
+			},
+			thing8: {
+				value: '打卡赚积分，解锁更多功能'
+			}
 		},
 	});
 
@@ -58,7 +64,7 @@ async function getWXACode(event) {
 	// 此处将获取永久有效的小程序码，并将其保存在云文件存储中，最后返回云文件 ID 给前端使用
 
 	const wxacodeResult = await cloud.openapi.wxacode.get({
-		path: 'pages/openapi/openapi',
+		path: 'pages/index/index',
 	});
 
 	const fileExtensionMatches = wxacodeResult.contentType.match(/\/([^\/]+)/);
@@ -67,7 +73,7 @@ async function getWXACode(event) {
 
 	const uploadResult = await cloud.uploadFile({
 		// 云文件路径，此处为演示采用一个固定名称
-		cloudPath: `wxacode_default_openapi_page.${fileExtension}`,
+		cloudPath: `wxacode.${fileExtension}`,
 		// 要上传的文件内容可直接传入图片 Buffer
 		fileContent: wxacodeResult.buffer,
 	});

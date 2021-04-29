@@ -1,6 +1,6 @@
 <view class="top-view">
   <view class="user-name">Welcome，{{hasUserLogin ? nickName : '游客'}}</view>
-  <van-image width="130rpx" height="130rpx" round src="{{hasUserLogin ? avatarUrl : '/images/logo.png'}}" custom-class="avatar-img"></van-image>
+  <van-image width="150rpx" height="150rpx" round src="{{hasUserLogin ? avatarUrl : '/images/logo.png'}}" custom-class="avatar-img"></van-image>
 </view>
 <block wx:if="{{hasUserLogin }}">
   <view class="cell-item" bind:tap='toFavorites'>
@@ -8,7 +8,7 @@
       <van-image width="30" height="30" src="/images/icons/mine.png" style="margin-right: 10px"></van-image>
       <text>收藏文档</text>
     </view>
-    <van-icon name="arrow" size="23" color="var(--base-theme-color)" slot="right-icon" />
+    <van-icon name="ellipsis" custom-style="transform: rotate(90deg)" color="var(--base-theme-color)" slot="right-icon" />
   </view>
   <view class="cell-item">
     <view class="cell-title">
@@ -16,7 +16,7 @@
       <text>联系客服</text>
       <button open-type="contact" show-message-card class="open-type-btn"></button>
     </view>
-    <van-icon name="arrow" size="23" color="var(--base-theme-color)" slot="right-icon" />
+    <van-icon name="ellipsis" custom-style="transform: rotate(90deg)" color="var(--base-theme-color)" slot="right-icon" />
   </view>
   <view class="cell-item">
     <view class="cell-title">
@@ -24,7 +24,7 @@
       <text>系统反馈</text>
       <button open-type="feedback" class="open-type-btn"></button>
     </view>
-    <van-icon name="arrow" size="23" color="var(--base-theme-color)" slot="right-icon" />
+    <van-icon name="ellipsis" custom-style="transform: rotate(90deg)" color="var(--base-theme-color)" slot="right-icon" />
   </view>
 </block>
 <view class="none-login" wx:else>
