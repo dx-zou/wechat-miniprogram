@@ -1,8 +1,0 @@
-.empty-view {
-  text-align: center;
-}
-
-.empty-desc {
-  margin-top: 30rpx;
-  color: #dfe1e3;
-}

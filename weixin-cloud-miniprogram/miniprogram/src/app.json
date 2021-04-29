@@ -62,10 +62,10 @@
     "van-cell": "@vant/weapp/cell/index",
     "van-cell-group": "@vant/weapp/cell-group/index",
     "van-dialog": "@vant/weapp/dialog/index",
+    "van-empty": "@vant/weapp/empty/index",
     "lucky-star": "components/luckyStar/luckyStar",
     "towxml": "/towxml/towxml",
     "doc-list-item": "/components/docListItem/index",
-    "empty-place": "/components/emptyPlace/index",
     "doc-scroll-view": "/components/docScrollView/index",
     "movable-sidebar": "/components/movableSidebar/index"
   },

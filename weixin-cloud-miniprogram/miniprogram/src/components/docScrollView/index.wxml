@@ -10,7 +10,7 @@
   bind:scrolltolower="onScrolltolower"
   bind:refresherrefresh="onScrollRefresh"
 >
-  <empty-place wx:if="{{docList.length === 0}}" />
+  <van-empty description="暂无相关内容" wx:if="{{docList.length === 0}}" />
   <doc-list-item wx:for="{{docList}}" wx:key="_id" item="{{item}}" index="{{index+1}}" />
   <view class="doc-loading">
     <van-loading size="15px" type="spinner" wx:if="{{loading}}">加载中...</van-loading>
