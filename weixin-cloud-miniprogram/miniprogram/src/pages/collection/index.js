@@ -31,6 +31,10 @@ I18nPage({
 			{
 				url: '../cp-poster/index',
 				name: '海报分享'
+			},
+			{
+				url: '../cp-charts/index',
+				name: 'echarts'
 			}
 		],
 	},

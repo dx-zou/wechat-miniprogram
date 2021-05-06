@@ -90,12 +90,12 @@ Page({
 
 	// 打卡提醒
 	async toCheckIn() {
-		wx.requestSubscribeMessage({
-			tmplIds: ['yqZDqT5s4eP388H_ONK2kpvzXo7vdnxUn2_g1eJapQQ'],
-			success: (res) => {
-				console.log(res)
-			}
-		})
+		// wx.requestSubscribeMessage({
+		// 	tmplIds: ['yqZDqT5s4eP388H_ONK2kpvzXo7vdnxUn2_g1eJapQQ'],
+		// 	success: (res) => {
+		// 		console.log(res)
+		// 	}
+		// })
 	},
 
 	// 轮播图切换
