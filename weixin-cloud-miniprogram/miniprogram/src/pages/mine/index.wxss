@@ -25,20 +25,8 @@
   box-shadow: 0 0 9px 1px #ebedf0;
 }
 
-.none-login {
-  margin-top: 200rpx;
-  text-align: center;
-}
-
-.login-tips {
-  margin-bottom: 50rpx;
-}
-
-.login-btn {
-  width: 80%;
-}
-
 .cell-item {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -51,7 +39,6 @@
 }
 
 .cell-title {
-  position: relative;
   display: flex;
   align-items: center;
 }

@@ -46,8 +46,6 @@
     "van-button": "@vant/weapp/button/index",
     "van-nav-bar": "@vant/weapp/nav-bar/index",
     "van-image": "@vant/weapp/image/index",
-    "van-field": "@vant/weapp/field/index",
-    "van-slider": "@vant/weapp/slider/index",
     "van-icon": "@vant/weapp/icon/index",
     "van-search": "@vant/weapp/search/index",
     "van-grid": "@vant/weapp/grid/index",
@@ -57,17 +55,15 @@
     "van-loading": "@vant/weapp/loading/index",
     "van-circle": "@vant/weapp/circle/index",
     "van-skeleton": "@vant/weapp/skeleton/index",
-    "van-progress": "@vant/weapp/progress/index",
-    "van-sticky": "@vant/weapp/sticky/index",
-    "van-cell": "@vant/weapp/cell/index",
-    "van-cell-group": "@vant/weapp/cell-group/index",
     "van-dialog": "@vant/weapp/dialog/index",
     "van-empty": "@vant/weapp/empty/index",
+    "van-action-sheet": "@vant/weapp/action-sheet/index",
     "lucky-star": "components/luckyStar/luckyStar",
     "towxml": "/towxml/towxml",
     "doc-list-item": "/components/docListItem/index",
     "doc-scroll-view": "/components/docScrollView/index",
-    "movable-sidebar": "/components/movableSidebar/index"
+    "movable-sidebar": "/components/movableSidebar/index",
+    "login-modal": "/components/loginModal/index"
   },
   "sitemapLocation": "sitemap.json"
 }

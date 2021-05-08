@@ -1,17 +1,12 @@
 
-.nav-bar {
-  background: transparent !important;
-}
-.nav-title {
-  color: #fff !important;
-}
-.index-container {
+.collection-container {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   background: var(--base-theme-color);
 }
+
 .nav-wrapper {
   width: 600rpx;
   height: 90rpx;
@@ -21,4 +16,8 @@
   background-color: #fff;
   border-radius: 8rpx;
   box-shadow: rgba(0, 0, 0, 0.3);
+}
+
+.nav-title {
+  width: 100%;
 }

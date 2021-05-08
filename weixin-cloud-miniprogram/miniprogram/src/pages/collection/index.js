@@ -1,5 +1,6 @@
 //index.js
 import { I18nPage } from '@miniprogram-i18n/core';
+const app = getApp()
 
 I18nPage({
 	data: {
@@ -37,6 +38,7 @@ I18nPage({
 				name: 'echarts'
 			}
 		],
+		showLogin: false
 	},
 
 	onLoad() {
@@ -50,15 +52,43 @@ I18nPage({
 		// 	title,
 		// });
 	},
+
+	onNavigate(e) {
+		// 没有授权登录的情况
+		if (!app.globalData.hasUserLogin) {
+			this.setData({
+				showLogin: true
+			})
+			return
+		}
+		wx.navigateTo({
+			url: e.currentTarget.dataset.url,
+		})
+	},
+
+	// 关闭登录
+	onCloseLogin() {
+		this.setData({
+			showLogin: false
+		})
+	},
+
+	// 登录成功
+	onSuccess(e) {
+		app.globalData.userInfo = e.detail
+		app.globalData.hasUserLogin = true
+		this.setData({
+			showLogin: false
+		})
+	},
+
 	onReady() {
 		wx.showShareMenu({
 			withShareTicket: true,
 			menus: ['shareAppMessage', 'shareTimeline'],
 		});
 	},
-	onClickLeft() {
-		wx.navigateBack();
-	},
+
 	/**
 	 * @description 切换语言
 	 *

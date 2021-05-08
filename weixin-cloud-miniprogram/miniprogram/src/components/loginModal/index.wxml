@@ -1,0 +1,14 @@
+<van-action-sheet
+  show="{{ show }}"
+  close-on-click-overlay
+  bind:click-overlay="onClose"
+>
+  <view class="none-login">
+    <view class="login-tips">
+      <view  style="padding: 15px">您尚未登录</view>
+      请点击微信授权登录，探索更多功能
+    </view>
+    <van-button type="primary" round custom-class="login-btn" bind:click="onLogin">微信授权登录</van-button>
+  </view>
+</van-action-sheet>
+

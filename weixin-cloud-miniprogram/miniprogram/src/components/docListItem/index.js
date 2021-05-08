@@ -1,5 +1,4 @@
 const app = getApp()
-const { getSaveUserInfo } = require("../../utils/utils")
 
 Component({
   /**
@@ -20,32 +19,40 @@ Component({
    * 组件的初始数据
    */
   data: {
-
+    showLogin: false
   },
 
   /**
    * 组件的方法列表
    */
   methods: {
+
     toDetail() {
       // 没有授权登录的情况
       if (!app.globalData.hasUserLogin) {
-        wx.showModal({
-          title: "您尚未登录!",
-          content: "请点击授权登录，解锁更多功能",
-          confirmText: "授权登录",
-          confirmColor: "#07c160",
-          success(res) {
-            if (res.confirm) {
-              getSaveUserInfo()
-            }
-          }
+        this.setData({
+          showLogin: true
         })
         return
       }
       const { _id} = this.data.item;
       wx.navigateTo({
         url: `/pages/doc-detail/index?id=${_id}`,
+      })
+    },
+
+    // 登录成功
+    onSuccess(e) {
+      app.globalData.userInfo = e.detail
+      app.globalData.hasUserLogin = true
+      this.setData({
+        showLogin: false
+      })
+    },
+
+    onCloseLogin() {
+      this.setData({
+        showLogin: false
       })
     }
   }

@@ -2,7 +2,7 @@
   <view class="user-name">Welcome，{{hasUserLogin ? nickName : '游客'}}</view>
   <van-image width="150rpx" height="150rpx" round src="{{hasUserLogin ? avatarUrl : '/images/logo.png'}}" custom-class="avatar-img"></van-image>
 </view>
-<block wx:if="{{hasUserLogin }}">
+<block>
   <view class="cell-item" bind:tap='toFavorites'>
     <view class="cell-title">
       <van-image width="30" height="30" src="/images/icons/mine.png" style="margin-right: 10px"></van-image>
@@ -14,23 +14,21 @@
     <view class="cell-title">
       <van-image width="30" height="30" src="/images/icons/contact.png" style="margin-right: 10px"></van-image>
       <text>联系客服</text>
-      <button open-type="contact" show-message-card class="open-type-btn"></button>
     </view>
+    <button wx:if="{{hasUserLogin }}" open-type="contact" show-message-card class="open-type-btn"></button>
+    <button wx:else  class="open-type-btn" bind:tap='onUnLogin'></button>
     <van-icon name="ellipsis" custom-style="transform: rotate(90deg)" color="var(--base-theme-color)" slot="right-icon" />
   </view>
   <view class="cell-item">
     <view class="cell-title">
       <van-image width="30" height="30" src="/images/icons/feedback.png" style="margin-right: 10px"></van-image>
       <text>系统反馈</text>
-      <button open-type="feedback" class="open-type-btn"></button>
     </view>
+    <button wx:if="{{hasUserLogin }}" open-type="feedback" class="open-type-btn"></button>
+    <button wx:else  class="open-type-btn" bind:tap='onUnLogin'></button>
     <van-icon name="ellipsis" custom-style="transform: rotate(90deg)" color="var(--base-theme-color)" slot="right-icon" />
   </view>
 </block>
-<view class="none-login" wx:else>
-  <view class="login-tips">
-    <view style="margin-bottom:10px">您尚未登录</view>
-    请点击授权登录，解锁更多功能
-  </view>
-  <van-button type="primary" round custom-class="login-btn" bind:click="toLogin">微信授权登录</van-button>
-</view>
+
+<login-modal show="{{showLogin}}" bind:close="onCloseLogin" bind:success="onSuccess"/>
+

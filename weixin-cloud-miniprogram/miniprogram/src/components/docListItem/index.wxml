@@ -18,3 +18,5 @@
     </view>
   </view>
 </view>
+
+<login-modal show="{{showLogin}}" bind:close="onCloseLogin" bind:success="onSuccess"/>

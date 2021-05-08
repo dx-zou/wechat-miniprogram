@@ -1,8 +1,9 @@
 
-<view class="index-container">
+<view class="collection-container">
   <view class="nav-wrapper" wx:for="{{list}}" wx:key="name">
-    <navigator url="{{item.url}}" open-type="navigate" class="nav-inner">
+    <view data-url="{{item.url}}" bind:tap="onNavigate" class="nav-title">
       <text>{{item.name}}</text>
-    </navigator>
+    </view>
   </view>
 </view>
+<login-modal show="{{showLogin}}" bind:close="onCloseLogin" bind:success="onSuccess"/>

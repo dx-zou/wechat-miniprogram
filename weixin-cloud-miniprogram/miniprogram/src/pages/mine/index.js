@@ -8,58 +8,14 @@ Page({
   data: {
     avatarUrl: "",
     nickName: "",
-    hasUserLogin: false
+    hasUserLogin: false,
+    showLogin: false
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad(options) {
-    
-  },
-  // 用户授权登录流程
-  async toLogin() {
-    wx.getUserProfile({
-      desc: "完善会员信息",
-      success: (res) => {
-        const { encryptedData, iv, signature, userInfo, cloudID } = res
-        app.globalData.userInfo = userInfo
-        app.globalData.hasUserLogin = true
-        this.setData({
-          hasUserLogin: true,
-          nickName: userInfo.nickName,
-          avatarUrl: userInfo.avatarUrl
-        })
-        wx.showToast({
-          icon: "none",
-          title: '授权登录成功',
-        })
-        // 用户信息上云
-        wx.cloud.callFunction({
-          name: "addUser",
-          data: {
-            encryptedData,
-            iv,
-            signature,
-            cloudID,
-            userInfo
-          }
-        })
-      },
-      fail() {
-        wx.showToast({
-          icon: "none",
-          title: '登录失败, 请重新授权登录',
-        })
-      }
-    })
-  },
-
-  toFavorites() {
-    wx.navigateTo({
-      url: '/pages/favorites/index',
-    })
-  },
+  onLoad() {},
 
   /**
    * 生命周期函数--监听页面显示
@@ -70,6 +26,44 @@ Page({
       avatarUrl,
       nickName,
       hasUserLogin: app.globalData.hasUserLogin
+    })
+  },
+
+  // 登录成功
+  onSuccess(e) {
+    const {nickName, avatarUrl } = e.detail
+    this.setData({
+      hasUserLogin: true,
+      showLogin: false,
+      nickName,
+      avatarUrl
+    })
+  },
+
+  // 没有登录时
+  onUnLogin() {
+    this.setData({
+      showLogin: true
+    })
+  },
+
+  // 关闭登录
+  onCloseLogin() {
+    this.setData({
+      showLogin: false
+    })
+  },
+
+  // 我的收藏
+  toFavorites() {
+    if(!this.data.hasUserLogin) {
+      this.setData({
+        showLogin: true
+      })
+      return 
+    }
+    wx.navigateTo({
+      url: '/pages/favorites/index',
     })
   }
 })
