@@ -22,10 +22,6 @@ I18nPage({
 				name: '地图',
 			},
 			{
-				url: '../canvas/index',
-				name: '绘图',
-			},
-			{
 				url: '../cp-lucky/index',
 				name: '抽奖',
 			},

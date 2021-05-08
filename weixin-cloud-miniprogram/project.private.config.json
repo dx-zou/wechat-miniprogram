@@ -34,6 +34,12 @@
         {
           "name": "pages/cp-poster/index",
           "pathName": "pages/cp-poster/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/cp-music/cp-music",
+          "pathName": "pages/cp-music/cp-music",
           "scene": null
         }
       ]

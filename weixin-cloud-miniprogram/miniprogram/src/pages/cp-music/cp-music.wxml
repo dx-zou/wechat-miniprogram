@@ -3,21 +3,21 @@
     <van-image width="300" height="300" round fit="cover" src="{{imgSrc}}" />
   </view>
   <view class="play-view">
-    <van-icon name="arrow-left" size="30px" color="#6bddf5" data-dir="pre" bind:click="handleCut" />
+    <van-icon name="arrow-left" size="30px" color="var(--base-theme-color)" data-dir="pre" bind:click="handleCut" />
     <van-icon
       name="{{playing ? 'pause-circle-o': 'play-circle-o'}}"
       size="50px"
-      color="#6bddf5"
+      color="var(--base-theme-color)"
       bind:click="startPlay"
     />
-    <van-icon name="arrow" size="30px" color="#6bddf5" data-dir="next" bind:click="handleCut" />
+    <van-icon name="arrow" size="30px" color="var(--base-theme-color)" data-dir="next" bind:click="handleCut" />
   </view>
   <view class="progress-view">
     <text>{{currentTime}}</text>
     <van-slider
       value="{{percent}}"
       bar-height="2px"
-      active-color="#ee0a24"
+      active-color="var(--base-theme-color)"
       custom-class="slider-view"
       bind:drag-start="handleDragstart"
       bind:drag-end="handleDragend"
