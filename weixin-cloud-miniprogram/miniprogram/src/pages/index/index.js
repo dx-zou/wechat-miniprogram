@@ -50,12 +50,12 @@ Page({
 				label: 'Node',
 				img: '/images/icons/node.png',
 			},
-			// {
-			// 	text: 'Component',
-			// 	label: 'Component',
-			// 	img: '/images/icons/component.png',
-			// 	url: '/pages/collection/index'
-			// },
+			{
+				text: '小程序组件',
+				label: 'Components',
+				img: '/images/icons/component.png',
+				url: '/pages/collection/index'
+			},
 		],
 		notices: `欢迎来到前端宝盒，专注前端程序员学习成长进阶交流`,
 		currentIndex: 0,

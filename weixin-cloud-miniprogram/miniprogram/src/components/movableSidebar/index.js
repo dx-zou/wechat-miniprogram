@@ -5,13 +5,16 @@ Component({
    * 组件的属性列表
    */
   properties: {
-
+    width: {
+      type: Number,
+      value: 55
+    },
   },
   lifetimes: {
     attached() {
       const { windowHeight } = app.globalData.systemInfo
       this.setData({
-        moveAreaHeight: `${windowHeight - 200}px`
+        moveAreaHeight: `${windowHeight - 300}px`
       })
     }
   },

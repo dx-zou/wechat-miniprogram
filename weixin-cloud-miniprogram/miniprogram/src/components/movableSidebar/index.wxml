@@ -1,4 +1,4 @@
-<movable-area class='movable-area' style="width:55px; height:{{moveAreaHeight}}">
+<movable-area class='movable-area' style="width:{{width}}px; height:{{moveAreaHeight}}">
   <movable-view direction="all" inertia out-of-bounds y="{{moveAreaHeight}}" class="movable-view">
     <slot></slot>
   </movable-view>
