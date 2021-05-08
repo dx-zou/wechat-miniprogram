@@ -6,7 +6,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    code: 'cloud://dx-feng.6478-dx-feng-1300037391/wxacode_default_openapi_page.jpeg',
+    code: 'https://6478-dx-feng-1300037391.tcb.qcloud.la/wxacode.jpeg?sign=32cda8567a3830cd080c8cfd4493d211&t=1620445711',
+    poster: 'https://6478-dx-feng-1300037391.tcb.qcloud.la/poster-bg.jpg?sign=b372b9e2a7129399264a85c7ab3ccbec&t=1620445750',
     src: '',
     show: false,
     height: '',
@@ -31,7 +32,7 @@ Page({
     const { windowHeight, windowWidth } = app.globalData.systemInfo
     this.setData({
       width: windowWidth,
-      height: windowHeight - 100
+      height: windowHeight - 200
     })
     const query = wx.createSelectorQuery()
     query.select('#myCanvas')
@@ -51,34 +52,34 @@ Page({
         ctx.fillRect(0, 0, windowWidth, windowHeight - 100)
         // 绘制图片
         const img = canvas.createImage();
-        img.src = '../../images/poster-bg.jpg'
+        img.src = this.data.poster
         img.onload = () => {
-          ctx.drawImage(img, 0, 0, windowWidth, 300)
+          ctx.drawImage(img, 0, 0, windowWidth, 260)
           ctx.save()
         }
 
         // 绘制文字
         const text = '哪里会有人喜欢孤独，不过是不喜欢失望。'
-        const name = '——— 村上春树'
+        const name = '—— 村上春树'
         ctx.fillStyle = '#333'
         ctx.font = "16px sans-serif"
-        ctx.fillText(text, windowWidth - ctx.measureText(text).width - 30, 340)
-        ctx.fillText(name, windowWidth - ctx.measureText(name).width - 30, 370)
+        ctx.fillText(text, windowWidth - ctx.measureText(text).width - 30, 300)
+        ctx.fillText(name, windowWidth - ctx.measureText(name).width - 30, 330)
         ctx.save()
 
         // 绘制横线
         ctx.lineWidth = 1
         ctx.strokeStyle='#ebedf0'
-        ctx.moveTo(0, 400);
-        ctx.lineTo(windowWidth, 400);
+        ctx.moveTo(0, 360);
+        ctx.lineTo(windowWidth, 360);
         ctx.stroke()
 
-        ctx.fillText('前端宝盒，等你揭秘', 15, 500)
+        ctx.fillText('前端宝盒，等你揭秘', 15, 460)
 
         const img1 = canvas.createImage();
-        img1.src = '../../images/code.jpeg'
+        img1.src = this.data.code
         img1.onload = () => {
-          ctx.drawImage(img1, windowWidth - 150, 430, 130, 130)
+          ctx.drawImage(img1, windowWidth - 150, 380, 130, 130)
         }
       })
   },

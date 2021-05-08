@@ -7,15 +7,15 @@ Page({
 	data: {
 		swiperList: [
 			{
-				imgUrl: '/images/1.png',
+				imgUrl: 'cloud://dx-feng.6478-dx-feng-1300037391/1.png',
 				url: "/pages/doc-list/index?label=JavaScript",
 			},
 			{
-				imgUrl: '/images/2.png',
+				imgUrl: 'cloud://dx-feng.6478-dx-feng-1300037391/2.png',
 				url: "/pages/collection/index"
 			},
 			{
-				imgUrl: '/images/3.png',
+				imgUrl: 'cloud://dx-feng.6478-dx-feng-1300037391/3.png',
 				url: "/pages/doc-list/index?label=Vue"
 			}
 		],

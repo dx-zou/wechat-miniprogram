@@ -1,7 +1,7 @@
 
  <canvas type="2d" id="myCanvas" style="width: {{width}}px; height: {{height}}px"></canvas>
 <view>
-  <image class="poster-img" src="https://6478-dx-feng-1300037391.tcb.qcloud.la/poster-bg.jpg?sign=53358ba989424e5b13afea71bb074796&t=1619595361"></image>
+  <image class="poster-img" src="{{poster}}"></image>
   <view class="poster-text">
     <view>
       <text>哪里会有人喜欢孤独，不过是不喜欢失望。</text>
@@ -10,11 +10,6 @@
       <text>—— 村上春树</text>
     </view>
   </view>
-  <!-- <view class="divider"></view>
-  <view class="poster-bottom">
-    <text>前端宝盒，等你揭秘</text>
-    <image class="img-code" show-menu-by-longpress src="https://6478-dx-feng-1300037391.tcb.qcloud.la/wxacode.jpeg"></image>
-  </view> -->
 </view>
 
 <button bind:tap="renderToCanvas">生成海报</button>
