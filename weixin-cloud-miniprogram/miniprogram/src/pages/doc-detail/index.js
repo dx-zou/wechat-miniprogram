@@ -41,7 +41,12 @@ Page({
       events: {
         // 为元素绑定的事件方法
         tap: e => {
-          console.log('tap', e);
+          const { tag , attrs } = e.currentTarget.dataset.data
+          if(tag === 'img') {
+            wx.previewImage({
+              urls: [attrs.src],
+            })
+          }
         },
       },
     });
