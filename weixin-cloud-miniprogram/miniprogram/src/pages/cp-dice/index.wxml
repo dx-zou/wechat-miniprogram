@@ -1,0 +1,12 @@
+<view class="dice-game-wrapper">
+    <view class="dice-tabs">
+        <view wx:for="{{5}}" wx:key="item" class="dice-tab-item {{activeIndex === index && 'active-tab-item'}}"
+            data-index="{{index}}" bind:tap="onChange">
+            {{ item }}
+        </view>
+    </view>
+    <view class="dice-modal-wrapper">
+        <dice-modal wx:for="{{diceNums}}" wx:key="item" animationData="{{animationData[index + 1]}}"></dice-modal>
+    </view>
+    <button type="default" class="start-btn" bind:tap="onStart">点击开始</button>
+</view>

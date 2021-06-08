@@ -1,0 +1,52 @@
+.dice-game-wrapper {
+	position: relative;
+	height: 100vh;
+	padding: 30rpx;
+	background-color: var(--base-theme-color);
+	
+}
+
+.dice-tabs {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+
+.dice-tab-item {
+    width: 100rpx;
+    height: 48rpx;
+    line-height: 48rpx;
+    text-align: center;
+    font-size: 32rpx;
+    font-weight: bold;
+    color: #333;
+    transition: all 0.3s;
+}
+.active-tab-item {
+    border-radius: 24rpx;
+    border: 1px solid #333333;
+    background: #fff;
+}
+
+.dice-modal-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 100rpx 0;
+    perspective: 1000rpx;
+}
+.start-btn {
+    position: absolute;
+    width: 80%;
+    height: 88rpx;
+    left: 50%;
+    bottom: 200rpx;
+    transform: translateX(-50%);
+    line-height: 88rpx;
+    border-radius: 44rpx;
+    background: linear-gradient(0deg, #d03513 0%, #f95c3c 100%);
+    font-size: 40rpx;
+    font-weight: bold;
+    color: #fff;
+}

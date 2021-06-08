@@ -46,6 +46,12 @@
                 {
                     "name": "pages/cp-lucky/index",
                     "pathName": "pages/cp-lucky/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/cp-dice/index",
+                    "pathName": "pages/cp-dice/index",
                     "scene": null
                 }
             ]

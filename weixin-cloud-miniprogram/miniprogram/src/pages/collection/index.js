@@ -26,6 +26,10 @@ I18nPage({
 				name: '抽奖',
 			},
 			{
+				url: '../cp-dice/index',
+				name: '掷骰子'
+			},
+			{
 				url: '../cp-poster/index',
 				name: '海报分享'
 			},
