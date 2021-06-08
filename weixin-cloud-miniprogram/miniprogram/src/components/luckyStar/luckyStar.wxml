@@ -8,7 +8,6 @@
       <block wx:if="{{item.indexli !== -1}}">
         <view class="setup_title">
           <view class="txt">{{item.name}}</view>
-          <view class="index">当前index：{{item.indexli}}</view>
           <view wx:if="{{item.parentsClass}}" class="^parentsClass">{{item.parentsClass}}</view>
         </view>
         <view class="indexli_view"></view>

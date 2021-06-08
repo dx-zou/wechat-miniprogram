@@ -1,0 +1,123 @@
+/* 转盘容器 */
+.lottery-main {
+    position: relative;
+    width: 650rpx;
+    height: 650rpx;
+    margin: 10px auto;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0px 0px 50px 0px rgba(4, 0, 0, 0.3);
+    font-size: 36rpx;
+    font-weight: bold;
+    color: #f85446;
+}
+/* 开始按钮 */
+.lottery-start {
+    position: absolute;
+    width: 195rpx;
+    height: 195rpx;
+    line-height: 195rpx;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    background: #ffe743;
+    border-radius: 50%;
+    box-shadow: 0px 3px 8px #aaa, inset 0px 0px 5px #fff;
+    z-index: 10;
+    transition: transform 0.3s;
+}
+
+.lottery-start:active {
+    box-shadow: 0px 0px 3px #aaa, inset 0px 0px 2px #fff;
+}
+/* 分区旋转容器 */
+.lottery-rotate {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    transition: transform 4s ease-out;
+}
+/* 指示器 */
+.prize-indicator {
+    position: absolute;
+    width: 73rpx;
+    height: 104rpx;
+    top: 280rpx;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+/* 转盘分区 */
+.lottery-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 50%;
+    width: 50%;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    transform-origin: bottom right;
+    background-color: #fff;
+}
+.lottery-item:nth-child(2n + 1) {
+    background-color: #aec7ff;
+}
+/* 两个物品的分区 */
+.lottery-item.lottery-item-2 {
+    height: 100% !important;
+    transform: none !important;
+}
+
+.lottery-item.lottery-item-2:nth-child(1) {
+    right: 0;
+    left: auto;
+    background-color: #aec7ff;
+}
+/* 三个物品的分区 */
+.lottery-item-3 {
+    width: 60%;
+    height: 60%;
+    left: 50%;
+    top: 50%;
+    transform-origin: 0 0;
+}
+/* 转盘文字 */
+.word-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.word-main {
+    width: 80%;
+    height: 80%;
+    position: relative;
+}
+.word-list {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+}
+
+.word-list-3:nth-child(1) {
+    transform: rotate(30deg) !important;
+}
+.word-list-3:nth-child(2) {
+    transform: rotate(150deg) !important;
+}
+.word-list-3:nth-child(3) {
+    transform: rotate(270deg) !important;
+}

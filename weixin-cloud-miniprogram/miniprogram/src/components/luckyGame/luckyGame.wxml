@@ -1,0 +1,19 @@
+<view class="lottery-main">
+    <view class="lottery-start" bind:tap="start">点击开始</view>
+    <view style="transform: rotate({{ rotateDeg || initSkew}}deg);transition: {{!canStart && 'transform 5s ease-out'}}"
+        bind:transitionend="onTransitionend" class="lottery-rotate">
+        <view class="word-wrap">
+            <view class="word-main">
+                <view wx:for="{{list}}" wx:key="item"
+                    style="transform: rotate({{list.length > 2 ? (index * 360) / list.length + 180 / list.length - 90 : 90 - index * 180}}deg)"
+                    class="word-list {{list.length === 3 && 'word-list-3'}}">
+                    <view>{{ item }}</view>
+                </view>
+            </view>
+        </view>
+        <view wx:for="{{list}}" wx:key="item"
+            style="transform: {{list.length > 3 ? 'rotate(' + index * (360 / list.length) + 'deg) skewX(' + initSkew + 'deg)' : 'rotate(' + index * (360 / list.length) + 'deg) skewX(' + (90 - 360 / list.length) +'deg)'}}"
+            class="lottery-item  {{list.length === 2 && 'lottery-item-2'}} {{list.length === 3 && 'lottery-item-3'}}">
+        </view>
+    </view>
+</view>

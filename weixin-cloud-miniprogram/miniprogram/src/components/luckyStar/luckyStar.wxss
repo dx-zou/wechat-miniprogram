@@ -13,7 +13,7 @@
   margin: auto;
   /* margin-top:38rpx; */
   overflow: hidden;
-  background: #d04011;
+  background: #fff;
   background-size: cover;
   position: relative;
 }
@@ -68,7 +68,6 @@
 }
 
 .setup_title .txt {
-  color: #fff;
   font-weight: bold;
 }
 .setup_title .index {

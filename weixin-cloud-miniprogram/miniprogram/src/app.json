@@ -59,6 +59,7 @@
     "van-skeleton": "@vant/weapp/skeleton/index",
     "van-slider": "@vant/weapp/slider/index",
     "lucky-star": "components/luckyStar/luckyStar",
+    "lucky-game": "components/luckyGame/luckyGame",
     "towxml": "/towxml/towxml",
     "doc-list-item": "/components/docListItem/index",
     "doc-scroll-view": "/components/docScrollView/index",

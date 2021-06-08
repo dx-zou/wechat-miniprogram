@@ -1,48 +1,54 @@
 {
-  "setting": {},
-  "condition": {
-    "plugin": {
-      "list": []
-    },
-    "game": {
-      "list": []
-    },
-    "gamePlugin": {
-      "list": []
-    },
-    "miniprogram": {
-      "list": [
-        {
-          "id": -1,
-          "name": "db guide",
-          "pathName": "pages/databaseGuide/databaseGuide",
-          "query": ""
+    "setting": {},
+    "condition": {
+        "plugin": {
+            "list": []
         },
-        {
-          "id": -1,
-          "name": "pages/cp-music/cp-music",
-          "pathName": "pages/cp-music/cp-music",
-          "query": "",
-          "scene": null
+        "game": {
+            "list": []
         },
-        {
-          "name": "pages/docList/index",
-          "pathName": "pages/docList/index",
-          "query": "",
-          "scene": null
+        "gamePlugin": {
+            "list": []
         },
-        {
-          "name": "pages/cp-poster/index",
-          "pathName": "pages/cp-poster/index",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/cp-music/cp-music",
-          "pathName": "pages/cp-music/cp-music",
-          "scene": null
+        "miniprogram": {
+            "list": [
+                {
+                    "id": -1,
+                    "name": "db guide",
+                    "pathName": "pages/databaseGuide/databaseGuide",
+                    "query": ""
+                },
+                {
+                    "id": -1,
+                    "name": "pages/cp-music/cp-music",
+                    "pathName": "pages/cp-music/cp-music",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/docList/index",
+                    "pathName": "pages/docList/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/cp-poster/index",
+                    "pathName": "pages/cp-poster/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/cp-music/cp-music",
+                    "pathName": "pages/cp-music/cp-music",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/cp-lucky/index",
+                    "pathName": "pages/cp-lucky/index",
+                    "scene": null
+                }
+            ]
         }
-      ]
     }
-  }
 }
